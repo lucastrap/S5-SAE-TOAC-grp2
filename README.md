@@ -19,12 +19,9 @@ Le dépôt est organisé de la manière suivante :
 └── README.md
 ```
 
-[[liensUtiles]]
 ## Liens utiles
 
-- Le https://webetud.iut-blagnac.fr/course/view.php?id=841[cours Moodle] sur la SAE
-- Le dépôt https://github.com/IUT-Blagnac/sae3-01-template[template] qui sert de base à tous les dépôts étudiants.
-- Le lien https://classroom.github.com/a/OUF7gxEa[classroom] si besoin.
+- Le https://half.toac-triathlon.com/[Site Toac] 
 
 
 ## Documents
