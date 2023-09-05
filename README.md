@@ -1,9 +1,9 @@
 # SAE S5 grp2 TOAC
 
 ## L'équipe
-- https://github.com/lucastrap[Luca Straputicari]
-- https://github.com/bsct-tormod[Thomas Deyemere]
-- https://github.com/SOLUPRED3[Matéo Pepin]
+- (https://github.com/lucastrap)[Luca Straputicari]
+- (https://github.com/bsct-tormod)[Thomas Deyemere]
+- (https://github.com/SOLUPRED3)[Matéo Pepin]
 
 ## Contexte du projet
 Ce dépôt GitHub a été créé pour le projet SAE (Système d'Application en Entreprise) du groupe 2 de la classe S5 de TOAC. Le projet vise à [expliquez brièvement l'objectif ou le domaine du projet].
@@ -21,7 +21,7 @@ Le dépôt est organisé de la manière suivante :
 
 ## Liens utiles
 
-- Le https://half.toac-triathlon.com/[Site Toac] 
+- Le (https://half.toac-triathlon.com/)[Site Toac] 
 
 
 ## Documents
