@@ -1,39 +1,25 @@
-SAE S5 grp2 TOAC
+# SAE S5 grp2 TOAC
 
-== Equipe
+## L'équipe
+- Membre 1
+- Membre 2
+- Membre 3
 
-Projet est réalisé par::
+## Contexte du projet
+Ce dépôt GitHub a été créé pour le projet SAE (Système d'Application en Entreprise) du groupe 2 de la classe S5 de TOAC. Le projet vise à [expliquez brièvement l'objectif ou le domaine du projet].
 
-- https://github.com
-- https://github.com/lucastrap[Luca Straputicari]
-- https://github.com/
-- https://github.com/
+## Arborescence du dépôt
+Le dépôt est organisé de la manière suivante :
 
-== Contexte général
-
-On doit faire :
-
-pour:
-etc
-
-
-=== Dépôt initial
-
-Découvrez l'arborescence détaillée de notre organisation GitHub (exemple de sprint) :
-
-
-Arborescence :
+/
+├── Projet TOAC/
+│ ├── 
+│ ├── 
+│ └── ...
+└── README.md
 
 
 
-[[liensUtiles]]
-=== Liens utiles
-
-- Le 
-- Le 
-- Le 
-
-=== Documents :
-
-
-=== Sprints :
+## Documents
+- [Rapport final]
+- [Autre document](docs/autre_document.pdf)
