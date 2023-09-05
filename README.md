@@ -1,4 +1,4 @@
-= SAE S5 grp2 TOAC
+ SAE S5 grp2 TOAC
 
 == Equipe
 
