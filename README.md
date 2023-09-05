@@ -19,7 +19,7 @@ Le dépôt est organisé de la manière suivante :
 └── README.md
 
 
-
+ 
 ## Documents
 - [Rapport final]
 - [Autre document](docs/autre_document.pdf)
