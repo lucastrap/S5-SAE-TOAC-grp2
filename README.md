@@ -6,7 +6,7 @@
 - [Matéo Pepin](https://github.com/SOLUPRED3)
 
 ## Contexte du projet
-Ce dépôt GitHub a été créé pour le projet SAE (Système d'Application en Entreprise) du groupe 2 de la classe S5 de TOAC. Le projet vise à [expliquez brièvement l'objectif ou le domaine du projet].
+Ce dépôt GitHub a été créé pour le projet SAE
 
 ## Arborescence du dépôt
 Le dépôt est organisé de la manière suivante :
