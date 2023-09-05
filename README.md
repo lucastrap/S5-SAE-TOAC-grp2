@@ -1,7 +1,7 @@
 # SAE S5 grp2 TOAC
 
 ## L'équipe
-- (https://github.com/lucastrap)[Luca Straputicari]
+- [Luca Straputicari](https://github.com/lucastrap)
 - (https://github.com/bsct-tormod)[Thomas Deyemere]
 - (https://github.com/SOLUPRED3)[Matéo Pepin]
 
