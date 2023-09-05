@@ -22,7 +22,7 @@ etc
 
 Découvrez l'arborescence détaillée de notre organisation GitHub (exemple de sprint) :
 
-```
+
 Arborescence :
 
 
