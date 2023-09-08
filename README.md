@@ -22,7 +22,7 @@ Le dépôt est organisé de la manière suivante :
 
 ## Liens utiles
 
-- Le [Site Toac] (https://half.toac-triathlon.com/)
+- Le [Site Toac](https://half.toac-triathlon.com/)
 
 
 ## Documents
