@@ -7,7 +7,9 @@
 - [Hai Son Dang](https://github.com/haisondang)
 
 ## Contexte du projet
-Ce dépôt GitHub a été créé pour le projet SAE5.A.01 - Développement avancé. Son objectif est pour réaliser une application réelle avec un client réel
+Ce dépôt GitHub a été créé pour le projet SAE5.A.01 - Développement avancé. Son objectif est pour réaliser une application réelle avec un client réel.
+
+Pour notre projet, notre client est le club TOAC Triathlon, un club toulousain qui souhaite que l'on refasse le site internet de leur principal évenement : le half du Lauragais. De plus l'équipe de TOAC Triathlon n'a pas d'informaticiens, il faudra donc les former a la maintenance du site internet.
 
 ## Arborescence du dépôt
 Le dépôt est organisé de la manière suivante :
