@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #fff;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#top{
+    background-image: url(../Images_Site/Index.jpg);
+    background-position: 50% -400px;
+    height: 500px;
+    font-size: 2em;
+}
+
+#epreuves{
+    background-image: url(../Images_Site/epreuves_course_tailleL.jpg);
+    height: 250px;
+    background-position: 50% -100px;
+}
+
+#ecoresponsable{
+    background-image: url(../Images_Site/carouselle_en_bas_4.jpg);
+    height: 250px;
+    background-position: 50% -100px;
+    background-size: cover;
+}
+
+#medias{
+    background-image: url(../Images_Site/epreuves_courses_tailleM.jpg);
+    height: 250px;
+    background-position: 50% -100px;
+}
+
+.section-title{
+    font-size: 2em;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .7);
+    height: 50%;
+    width: 60%;
+}
+
+.section-elements p{
+    background-color: rgba(0, 0, 0, .7);
+}
