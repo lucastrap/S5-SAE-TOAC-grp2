@@ -14,7 +14,7 @@ body{
 
 .section{
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -38,6 +38,7 @@ body{
     height: 250px;
     background-position: 50% -100px;
     background-size: cover;
+    
 }
 
 #medias{
@@ -63,10 +64,15 @@ body{
 }
 
 .section-content{
+    flex-direction: row;
+    margin: 0;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 2em;
     background-color: rgba(0, 0, 0, .7);
     height: 60%;
     width: 70%;
-    display: none;
 }
 
 .section-content p{
