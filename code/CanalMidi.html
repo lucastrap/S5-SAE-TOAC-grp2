@@ -64,8 +64,8 @@
 
   .square {
      
-    width: 70%;
-    margin-top: 2%;
+    width: 60%;
+  
     }
 
  
@@ -136,9 +136,7 @@
             width: 100%;
         }
     }
-    body {
-          
-        }
+   
         .container{
             color: rgb(68, 68, 68);
             font-family: Arial, sans-serif;
@@ -170,64 +168,73 @@
             text-decoration: none;
             color: #007BFF;
         }
-        #carousel-container {
+      
+      
+        #slider {
+            user-select: none;
             position: relative;
-            width: 100%; /* Ajustez la largeur selon vos besoins */
-        
-            overflow: hidden;
-            background-size: cover;
-        }
-
-        #carousel {
+            margin: auto;
             display: flex;
-            transition: transform 0.3s ease-in-out;
-            height: auto;
-            background-size: cover;
-          
+            align-items: center;
+            margin-bottom: 10%;
+            height: 400px; /* Hauteur de la div */
+            overflow: hidden; /* Pour s'assurer que l'image ne dépasse pas la div */
         }
 
-        .carousel-item {
-            flex-shrink: 0; 
-           max-width: 100%;
-        }
+#precedent,
+#suivant {
+    cursor: pointer;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+    position: absolute;
+    font-size: 50px;
 
-        #un{
-            background-image: url("/Images_Site/carouselle_en_bas_1.jpg");
-        
-        }
-        #deux{
-            background-image: url("/Images_Site/carouselle_en_bas_2.jpg");
-        
-        }
-        #trois{
-            background-image: url("/Images_Site/carouselle_en_bas_3.jpg");
-        
-        }
-        #quatre{
-            background-image: url("/Images_Site/carouselle_en_bas_4.jpg");
-        
-        }
+    color: rgba(220, 220, 220, 0.8);
+    background-color: rgba(45, 44, 44, 0.8);
+    padding: 10px;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
 
-        .carousel-navigation {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
-        .prev, .next {
-            cursor: pointer;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-        }
+.container2 {
+    margin-top: 10%;
+  display: flex; /* Utilisez un conteneur flexible pour centrer les images */
+  justify-content: center; /* Centrez horizontalement les éléments enfants */
+  align-items: center; /* Centrez verticalement les éléments enfants */
+    gap: 10%;
+    margin-bottom: 2%;
+}
 
-        .prev {
-            left: 0;
-        }
+.container2 img {
+  width: 100%; /* Définissez la largeur à 100% pour que les images soient de la même taille */
+  max-width: 300px; /* Vous pouvez définir une largeur maximale si nécessaire */
+  height: auto; /* Permettez à la hauteur de s'ajuster automatiquement pour maintenir les proportions */
+}
 
-        .next {
-            right: 0;
-        }
+#precedent {
+    left: 0;
+}
+
+#suivant {
+    right: 0;
+}
+
+#slider:hover #precedent,
+#slider:hover #suivant {
+    opacity: 1;
+}
+    
 </style>
 
 <body>
@@ -277,13 +284,12 @@
     
     </div>
     <div class="container">
-<div class="square"> <h1>Notre collaboration avec Voies Navigables de France (VNF)</h1>
-    <div class="container">
-         <img src="/Images_Site/vnf.jpg"></br>
-        <img src="/Images_Site/Replantons_le_canal.png" width="50%" >
-    
- 
-   
+<div class="square"> <h2>Notre collaboration avec Voies Navigables de France (VNF)</h2>
+    <div class="container2">
+        <img src="/Images_Site/vnf.jpg">
+        <img src="/Images_Site/Replantons_le_canal.png">
+      </div>
+      
 
 
     <p>
@@ -298,51 +304,36 @@
         Pour aller plus loin n’hésitez pas à consulter le site internet VNF :<a href="https://www.replantonslecanaldumidi.fr/" target="_blank">“Replantons le canal du Midi”</a> 
          
         </p> 
-         
-         
-        <div id="carousel-container">
-            <div id="carousel">
-                <div class="carousel-item"id="un"></div>
-                <div class="carousel-item"id="deux"></div>
-                <div class="carousel-item"id="trois"></div>
-                <div class="carousel-item"id="quatre"></div>
-            </div>
-            <div class="carousel-navigation">
-                <div class="prev" onclick="prevSlide()">&#10094;</div>
-                <div class="next" onclick="nextSlide()">&#10095;</div>
-            </div>
-
+        <div id="slider">
+            <img src="/Images_Site/carouselle_en_bas_1.jpg" alts="La forêt de peupliers" id="slide" class="fade">
+            <div id="precedent" onclick="ChangeSlide(-1)"><</div>
+            <div id="suivant" onclick="ChangeSlide(1)">></div>
         </div>
+        
+       
   
 </div>
 </div>
-   
+ 
+    <script>
+    const slide = ["/Images_Site/carouselle_en_bas_1.jpg", "/Images_Site/carouselle_en_bas_2.jpg", "/Images_Site/carouselle_en_bas_3.jpg", "/Images_Site/carouselle_en_bas_4.jpg"];
+let numero = 0;
 
-<script>
-    let currentIndex = 0;
-    const carousel = document.getElementById('carousel');
-    const items = document.querySelectorAll('.carousel-item');
+function ChangeSlide(sens) {
+    numero = numero + sens;
+    if (numero < 0)
+        numero = slide.length - 1;
+    if (numero > slide.length - 1)
+        numero = 0;
+    const slideElement = document.getElementById("slide");
+    slideElement.classList.remove("fade"); // Supprime la classe pour la transition
+    setTimeout(() => {
+        slideElement.src = slide[numero];
+        slideElement.classList.add("fade"); // Ajoute la classe pour la transition
+    }, 50); // Une petite pause avant de changer l'image pour laisser la transition fonctionner
+}
 
-    function updateCarousel() {
-        const itemWidth = items[currentIndex].clientWidth;
-        carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-    }
+    </script>
 
-    function prevSlide() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
-        }
-    }
-
-    function nextSlide() {
-        if (currentIndex < items.length - 1) {
-            currentIndex++;
-            updateCarousel();
-        }
-    }
-
-    updateCarousel();
-</script>
 </body>
 </html>
