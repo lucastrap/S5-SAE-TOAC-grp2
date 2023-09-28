@@ -18,8 +18,10 @@ Use-Cases :
 
 image::documentation/images/nomImage.png[Use Case Client, 400]
 
+{empty} +
+
 [.text-justify]
-Les utilisateurs de base peuvent :
+Les *utilisateurs* de base peuvent :
 
 * S'informer sur les courses
 * S'inscrire à une course
@@ -27,6 +29,8 @@ Les utilisateurs de base peuvent :
 * Consulter le fil instagram
 * S'informer sur l'écoresponsabilité de l'organisation
 * Consulter les news de l'organisation
+
+{empty} +
 
 [.text-justify]
 Les *administrateurs* ont accès à un pannel servant à la gestion du site, avec ce dernier ils peuvent :
