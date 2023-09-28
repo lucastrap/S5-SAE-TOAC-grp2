@@ -49,7 +49,7 @@ Tous les fichiers fonctionnels du site se trouvent dans le répertoire `code/` d
 
 Diagramme SEP :
 
-image::documentation/images/SEP.png[Diagramme SEP du site, 700]
+image::images/SEP.png[Diagramme SEP du site, 700]
 
 {empty} +
 
