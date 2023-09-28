@@ -16,7 +16,7 @@ Le site web peut être utilisé par n'importe quel utilisateur . Cependant il ex
 
 Use-Cases :
 
-image::documentation/images/nomImage.png[Use Case Client, 400]
+image::documentation/images/nomImage.png[Use Case, 400]
 
 {empty} +
 
