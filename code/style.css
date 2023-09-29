@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#top{
+    background-image: url(../Images_Site/Index.jpg);
+    background-position: 50% -400px;
+    height: 1200px;
+    font-size: 2em;
+    z-index: 2;
+    flex-direction: row;
+}
+
+#top h1{
+    margin-top: -150px;
+}
+#top img{
+    height: 200px;
+    margin-top: 300px;
+}
+#epreuves{
+    background-image: url(../Images_Site/epreuves_course_tailleL.jpg);
+    height: 800px;
+    background-position: calc(-360px - var(--parallaxY)) calc(-160px - calc(var(--parallaxY)*0.2));
+    z-index: 3;
+}
+
+#sc-epreuves{
+    transform: translateY(-130%);
+    font-size: 1.5em;
+}
+
+#ecoresponsable{
+    background-image: url(../Images_Site/carouselle_en_bas_4.jpg);
+    height: 800px;
+    background-position: 0 calc(-160px - calc(var(--parallaxY)*2));
+    background-size: cover;
+    z-index: 2;    
+}
+
+#sc-eco{
+    font-size: 1.5em;
+}
+
+#medias{
+    background-image: url(../Images_Site/epreuves_courses_tailleM.jpg);
+    height: 800px;
+    background-position: calc(-360px - var(--parallaxY)*-1) calc(-160px - calc(var(--parallaxY)*0.2));
+    z-index: 1;
+}
+
+#sc-medias{    
+    font-size: 1.5em;
+    width: 90%;
+}
+
+
+.section-container{
+    font-size: 2em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .7);
+    height: 50%;
+    width: 60%;
+    /* transition: all .2s ease-in-out; */
+}
+
+.section-title{
+    font-size: 3em;
+}
+
+.section-content a, .section-content a:visited, .section-content a:active{
+    color: #fff;
+    text-decoration: none;
+}
+
+.section-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
