@@ -273,15 +273,14 @@ margin-left: 5%;
     height: 100%; /* Assurez-vous que la div parente prend toute la hauteur disponible */
 }
 .page{
-    min-height: 90vh;
+    min-height: 100vh;
     padding-top: 5%;
     font-size: 16px;
     background-image: url("/Images_Site/marek.jpg"); /* Couleur grise, vous pouvez ajuster la couleur en fonction de vos préférences */
     color: white;
-    
     background-size: cover; /* Pour redimensionner automatiquement l'image pour remplir l'arrière-plan */
-  background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
-  background-attachment: fixed; /* Pour que l'image reste fixe lorsque vous faites défiler la page */
+    background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
+    background-attachment: fixed; /* Pour que l'image reste fixe lorsque vous faites défiler la page */
 
 }
 
@@ -326,6 +325,19 @@ margin-left: 5%;
         margin-top: 20%;
         font-size: 16px;
     }
+    .test-button {
+    background-color: pink; /* Couleur rose */
+    color: white; /* Couleur du texte en blanc */
+    padding: 10px 20px; /* Espacement intérieur du bouton */
+    border: none; /* Supprimez la bordure */
+    cursor: pointer;
+    transition: background-color 0.4s; /* Animation de transition de la couleur de fond */
+}
+.test-button:hover {
+    background-color: #ff69b4; /* Nouvelle couleur de fond au survol */
+    /* Ajoutez ici votre animation JavaScript */
+}
+
 </style>
 
 <body>
@@ -387,7 +399,7 @@ margin-left: 5%;
             <div class="item-text">
                 <a href="">Edition 2023</a></br>
                 <strong>Guide Athlète 2023 !</strong>
-                <p>Votre guide athlète 2023 !</p>
+                <h3>Votre guide athlète 2023 !</h3>
             </div>
         </div>
     
@@ -395,8 +407,8 @@ margin-left: 5%;
         <div class="grid-item">
             <img src="/Images_Site/actus_2.jpg" alt="Image 2">
             <div class="item-text">
-                <a href="">Edition 2023</a>
-                <p>Si le Half du Lauragais était...</p>
+                <a href="">Edition 2023</a></br>
+                <h3d>Si le Half du Lauragais était...</h3>
             </div>
         </div>
     
@@ -404,13 +416,31 @@ margin-left: 5%;
         <div class="grid-item">
             <img src="/Images_Site/Index.jpg" alt="Image 3">
             <div class="item-text">
-                <a href="">Edition 2023</a>
-                <p>Les inscriptions sont ouvertes !</p>
+                <a href="">Edition 2023</a></br>
+                <h3>Les inscriptions sont ouvertes !</h3>
             </div>
         </div>
     </div>
+   <!-- Bouton "Test" -->
+<!-- Bouton "Voir toutes les publications" -->
+<div class="container">
+    <button class="test-button"style="margin-top:5%">Voir toutes les publications</button>
+</div>
+
     
  </div>
 
 </body>
+<script>
+    const testButton = document.querySelector('.test-button');
+
+    testButton.addEventListener('mouseenter', () => {
+        testButton.style.transform = 'scale(1.1)'; // Grossir le bouton au survol
+    });
+
+    testButton.addEventListener('mouseleave', () => {
+        testButton.style.transform = 'scale(1)'; // Revenir à la taille normale lorsque la souris quitte le bouton
+    });
+</script>
+
 </html>
