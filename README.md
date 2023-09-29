@@ -25,7 +25,7 @@ Le dépôt est organisé de la manière suivante :
 ## Liens utiles
 
 - Le [Site Toac](https://half.toac-triathlon.com/)
-
+- Notre version du [Site toac](https://lucastrap.github.io/S5-SAE-TOAC-grp2/)
 
 ## Documents
 - [Rapport final]
