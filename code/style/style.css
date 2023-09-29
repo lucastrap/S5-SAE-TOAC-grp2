@@ -21,7 +21,7 @@ body{
 }
 
 #top{
-    background-image: url(../Images_Site/Index.jpg);
+    background-image: url(../../Images_Site/Index.jpg);
     background-position: 50% -400px;
     height: 1200px;
     font-size: 2em;
@@ -37,7 +37,7 @@ body{
     margin-top: 300px;
 }
 #epreuves{
-    background-image: url(../Images_Site/epreuves_course_tailleL.jpg);
+    background-image: url(../../Images_Site/epreuves_course_tailleL.jpg);
     height: 800px;
     background-position: calc(-360px - var(--parallaxY)) calc(-160px - calc(var(--parallaxY)*0.2));
     z-index: 3;
@@ -49,7 +49,7 @@ body{
 }
 
 #ecoresponsable{
-    background-image: url(../Images_Site/carouselle_en_bas_4.jpg);
+    background-image: url(../../Images_Site/carouselle_en_bas_4.jpg);
     height: 800px;
     background-position: 0 calc(-160px - calc(var(--parallaxY)*2));
     background-size: cover;
@@ -61,7 +61,7 @@ body{
 }
 
 #medias{
-    background-image: url(../Images_Site/epreuves_courses_tailleM.jpg);
+    background-image: url(../../Images_Site/epreuves_courses_tailleM.jpg);
     height: 800px;
     background-position: calc(-360px - var(--parallaxY)*-1) calc(-160px - calc(var(--parallaxY)*0.2));
     z-index: 1;
