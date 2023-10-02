@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #fefefe;
+    font-family: 'Oswald', sans-serif;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #2e2e2e;
+}
+
+.section-content{
+    padding: 15px; 
+    align-items: center;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 2%;
+    min-width: 60%;
+    max-width: 90%;
+    width: auto;
+}
+
+.section-title{
+    font-size: 2em;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    width: 100%;
+}
+
+.section-element{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: wrap-content;
+    width: 100%;
+    border-radius: 25px;
+    border-width: 1px;
+    border-style: solid;
+    margin: 10px;
+    top: 0;
+    padding-bottom: 20px;
+}
+
+.section-element::before{
+    content: '';
+    background-image: url("https://half.toac-triathlon.com/wp-content/uploads/2023/03/velo-scaled.jpg");
+    background-size: cover;
+    background-position: top center;
+    border-radius: 25px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; 
+    opacity: 0;
+    z-index: 0;
+}
+
+.section-element > *{
+    position: relative;
+    z-index: 1;
+}
+
+.section-element:hover::before{
+    opacity: 50%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#triathlon .section-title{
+    background-image: linear-gradient(to right, #98cc4c, #fefefe);
+}
+
+#aquathlon .section-title{
+    background-image: linear-gradient(to right, #3c5cfc, #fefefe);
+}
+
+#swimrun .section-title{
+    background-image: linear-gradient(to right, #3c5cfc, #fefefe);
+}
+
+#triathlon .price{
+    color: #a0cc4c;
+}
+
+#triathlon .section-element {
+    border-color: #a0cc4c;
+}
+
+#aquathlon .price{
+    color: #3c5cfc;
+}
+
+#aquathlon .section-element {
+    border-color: #3c5cfc;
+}
+
+#swimrun .price{
+    color: #3c5cfc;
+}
+
+#swimrun .section-element {
+    border-color: #3c5cfc;
+}
+
+/*
+.bg-image{
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+
+.bg-image:hover{
+    opacity: 80%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+*/

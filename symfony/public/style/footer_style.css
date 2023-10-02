@@ -1,0 +1,49 @@
+footer{
+    padding: 45px 0 70px;
+    background: #0f0f0f;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Set the text color to white, adjust as needed */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+footer .p{
+    color: gray;
+}
+
+.copyright{
+    padding: 20px 30px;
+}
+
+.container {
+    display: inline-block; /* Center align the content horizontally */
+    position: relative; /* Relative positioning for the circle border */
+}
+
+.envelope {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    transition: filter 0.3s ease-in-out; /* Smooth transition for the glow effect */
+    filter: brightness(0.5);
+}
+
+.circle-border {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: filter 0.3s ease-in-out; /* Smooth transition for the border color */
+    filter: brightness(0.5);
+}
+
+/* Hover effect: Make the envelope and circle border glow */
+.container:hover .envelope {
+    filter: brightness(1.7); /* Adjust brightness for the envelope image */
+}
+
+.container:hover .circle-border {
+    filter: brightness(1.7); /* Change the border color on hover */
+}

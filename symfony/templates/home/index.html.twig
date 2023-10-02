@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="main-container">
+        <div class="section" id="top">
+            <h1 data-parallax='{"y": 0.3, "variable": true}'>Rendez vous en 2024 </br> Résultats et photos en ligne</h1>
+            <img src="../Images_Site/double-arrow-down-svgrepo-com.svg" data-parallax='{"y":0, "arrow": 1.2}'>
+        </div>
+        <div class="section" id="epreuves" data-parallax='{"y": 0.1, "variable": true}'>
+            <div class="section-container">
+                <div class="section-title" data-parallax='{"x": 1, "scale": 0.7, "display": "sc-epreuves", "variable": true}'>
+                    <p>Épreuves</p>
+                </div>
+                <div class="section-content" id="sc-epreuves">
+                    <a href="./code/programme.html">Programme</a>
+                    <a href="./code/courses.html">Courses</a>
+                    <a href="./code/resultat.html">Résultats</a>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="ecoresponsable" data-parallax='{"y": 0.1, "variable": true}'>
+            <div class="section-container">
+                <div class="section-title" data-parallax='{"x": 1, "scale": 0.7, "display": "sc-eco", "variable": true}'>
+                    Écoresponsable
+                </div>
+                <div class="section-content" id="sc-eco">
+                    <a href="./code/ecoresponsable.html">Triathlon durable</a>
+                    <a href="./code/CanalMidi.html">Replantons le Canal du Midi</a>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="medias" data-parallax='{"y": 0.1, "variable": true}'>
+           <div class="section-container">
+               <div class="section-title" data-parallax='{"x": 1, "scale": 0.7, "display": "sc-medias", "variable": true}'>
+                   Médias
+                </div>
+                <div class="section-content" id="sc-medias">
+                    <a href="https://linktr.ee/halfdulauragais" target="_blank">Photos 2023</a>
+                    <a href="https://www.flickr.com/photos/156439498@N08/albums" target="_blank">Photos 2022 et avant</a>
+                    <a href="./code/nos_partenaires.html">Nos partenaires</a>
+                    <a href="./code/news.html">Fil d'actus</a>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

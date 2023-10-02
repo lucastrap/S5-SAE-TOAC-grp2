@@ -1,0 +1,72 @@
+.outer-flex-container {
+    display: flex;
+    flex-direction: column; /* Arrange items in columns (rows for inner grids) */
+    gap: 0px; /* Gap between outer grid rows */
+    flex-wrap: wrap; /* Wrap items to new line when there is no space */
+    
+}
+
+/* Style for the inner flex containers */
+.inner-flex-container {
+    display: flex;
+    gap: 0px; /* Gap between items in the same line */
+    flex-wrap: wrap;
+    width: 100vw;
+    align-items: center;
+
+
+}
+
+/* Style for grid items */
+.grid-item {
+    background-color: none;
+    color: #ffffff;
+    text-align: center;
+    display: flex; /* Enable flex properties for items */
+    justify-content: center; /* Center text horizontally */
+    min-height: 70px;
+    min-width: 250px;
+
+    padding: 0 0.85%;
+    transition: all 0.2s ease;
+    align-items: center;
+}
+
+.grid-item:not(:first-child){
+    flex: 0;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: 600;
+    margin: 0px;
+    font-family: 'Open Sans';
+    letter-spacing: 0;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+   
+}
+
+img{
+    max-width: 300%; /* Limit the maximum width of the images */
+    height: auto;
+    margin: 0 auto;
+}
+
+@media (max-width: 2000px) {
+    .grid-item img {
+        width: 87%; /* Set the image width to 50% of the container within the media query range */
+    }
+}
+
+@media (max-width: 1000px) {
+    .grid-item img {
+        width: 72%; /* Set the image width to 80% of the container within the media query range */
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-item img {
+        width: 170%; /* Set the image width to 80% of the container within the media query range */
+    }
+}
