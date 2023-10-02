@@ -9,7 +9,7 @@
 }
 
 .bandeau_gauche {
-    background-image: url('../../Images_Site/index_top.jpg');
+    background-image: url('../assets/index_top.jpg');
     background-size: 35%;
     background-position: left;
     margin-left: 2%;
