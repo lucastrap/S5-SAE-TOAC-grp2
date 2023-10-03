@@ -56,7 +56,7 @@
     
     </div>
     <div class="container">
-<div class="square"> <h2>Notre collaboration avec Voies Navigables de France (VNF)</h2>
+    <div class="square"> <h2>Notre collaboration avec Voies Navigables de France (VNF)</h2>
     <div class="container2">
         <img src="/Images_Site/vnf.jpg">
         <img src="/Images_Site/Replantons_le_canal.png">
@@ -98,7 +98,7 @@ function ChangeSlide(sens) {
     if (numero > slide.length - 1)
         numero = 0;
     const slideElement = document.getElementById("slide");
-    slideElement.classList.remove("fade"); // Supprime la classe pour la transition
+    slideElement.classList.remove("fade");  // Supprime la classe pour la transition
     setTimeout(() => {
         slideElement.src = slide[numero];
         slideElement.classList.add("fade"); // Ajoute la classe pour la transition
@@ -110,7 +110,7 @@ function ChangeSlide(sens) {
 </body>
 <footer>
     <a href="mailto:inscription-nailloux@googlegroups.com">
-        <div class="container">
+        <div class="containerFoot">
             <img src="../Images_Site/envelope.png" class = "envelope" style="width: 40px; height: 40px; margin: 0;">
             <div class="circle-border"></div>
         </div>

@@ -84,6 +84,7 @@ transform: scale(1); /* Rétablir la taille normale du sous-menu */
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-left: 2%;
     }
     h1 {
         font-size: 33px;

@@ -15,7 +15,7 @@ footer .p{
     padding: 20px 30px;
 }
 
-.container {
+.containerFoot {
     display: inline-block; /* Center align the content horizontally */
     position: relative; /* Relative positioning for the circle border */
 }
