@@ -1,112 +1,124 @@
- div {
-        outline: 1px solid red;
-    }
+body {
+    margin: 0;
+    font-size: 16px;
+    /* Utilisez des unités relatives pour la taille de police */
+}
 
-    body {
-        margin: 0;
-        font-size: 16px; /* Utilisez des unités relatives pour la taille de police */
-    }
+.menu-item {
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.4s;
+    /* Animation de transition de la couleur de fond */
+}
 
+.menu-item:hover {
+    background-color: #e70404;
+    /* Couleur de fond au survol */
 
- 
-     
-    .menu-item {
-        cursor: pointer;
-        text-align: center;
-        transition: background-color 0.4s; /* Animation de transition de la couleur de fond */
-    }
+}
 
-    .menu-item:hover {
-        background-color: #e70404; /* Couleur de fond au survol */
-   
-    }
-    /* Styles pour le surlignage du texte au survol */
+/* Styles pour le surlignage du texte au survol */
 
-    .hidden {
-        visibility:hidden ;
-    }
-    .sous-menu {
-    
+.hidden {
+    visibility: hidden;
+}
+
+.sous-menu {
+
     margin-top: 0.5%;
-    opacity: 0; /* Masquer le sous-menu par défaut en réglant l'opacité à 0 */
-    transform: scale(0.9); /* Réduire légèrement la taille du sous-menu */
-    transition: opacity 0.2s, transform 0.5s; /* Ajouter une transition pour l'opacité et la taille */
+    opacity: 0;
+    /* Masquer le sous-menu par défaut en réglant l'opacité à 0 */
+    transform: scale(0.9);
+    /* Réduire légèrement la taille du sous-menu */
+    transition: opacity 0.2s, transform 0.5s;
+    /* Ajouter une transition pour l'opacité et la taille */
     position: absolute;
     background-color: #ffffff;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1; /* Assurez-vous que le sous-menu est au-dessus du reste du contenu */
+    z-index: 1;
+    /* Assurez-vous que le sous-menu est au-dessus du reste du contenu */
 }
 
 
 
-      /* Styles pour les éléments du sous-menu */
-    .sous-menu-item {
-        padding: 10px;
-        text-align: left;
-        width: 150px;
-        cursor: pointer;
-        transition: all 0.5s;
+/* Styles pour les éléments du sous-menu */
+.sous-menu-item {
+    padding: 10px;
+    text-align: left;
+    width: 150px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.sous-menu-item:hover {
+    background-color: #cccccc;
+    /* Couleur de fond au survol */
+}
+
+.menu-item:hover .sous-menu {
+    opacity: 1;
+    /* Afficher le sous-menu en réglant l'opacité à 1 */
+    transform: scale(1);
+    /* Rétablir la taille normale du sous-menu */
+}
+
+.svg {
+    cursor: pointer;
+    margin-left: 75%;
+}
+
+.insta {
+    margin-right: 80%;
+    cursor: pointer;
+}
+
+/* Utilisez une règle de média query pour ajuster la mise en page sur les petits écrans */
+@media (max-width: 768px) {
+    .bandeau_gauche {
+        width: 100%;
     }
 
-    .sous-menu-item:hover{
-        background-color: #cccccc; /* Couleur de fond au survol */
+    .bandeau-droite {
+        width: 100%;
     }
+}
 
-   .menu-item:hover .sous-menu {
-    opacity: 1; /* Afficher le sous-menu en réglant l'opacité à 1 */
-    transform: scale(1); /* Rétablir la taille normale du sous-menu */
-    }
+body {}
 
-    .svg{
-        cursor:pointer;
-      margin-left: 75%;
-    }
-    .insta{
-        margin-right:80%;
-        cursor:pointer;
-    }
+.container {
+    color: rgb(68, 68, 68);
+    font-family: Arial, sans-serif;
+    text-align: left;
+    /* Le texte sera centré horizontalement */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-    /* Utilisez une règle de média query pour ajuster la mise en page sur les petits écrans */
-    @media (max-width: 768px) {
-        .bandeau_gauche {
-            width: 100%;
-        }
+h1 {
+    font-size: 33px;
+    font-weight: bold;
+}
 
-        .bandeau-droite {
-            width: 100%;
-        }
-    }
-    body {
-          
-        }
-        .container{
-            color: rgb(68, 68, 68);
-            font-family: Arial, sans-serif;
-            text-align: left; /* Le texte sera centré horizontalement */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        h1 {
-            font-size: 33px;
-            font-weight: bold;
-        }
-        h2 {
-            font-size: 24px;
-        }
-        p {
-            font-size: 14px;
-            text-align: left; /* Le texte du paragraphe reste aligné à gauche */
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-        ul {
-            text-align: left;
-            margin-left: 40px;
-        }
-    
-        a {
-            text-decoration: none;
-            color: #007BFF;
-        }
+h2 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 14px;
+    text-align: left;
+    /* Le texte du paragraphe reste aligné à gauche */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+ul {
+    text-align: left;
+    margin-left: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}

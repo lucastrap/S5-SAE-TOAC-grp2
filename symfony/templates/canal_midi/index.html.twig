@@ -1,0 +1,65 @@
+{% extends 'layouts/default/base.html.twig' %}
+
+{% block body %}
+    <link rel="stylesheet" href="./style/CanalMidi.css">
+
+    <div class="container">
+        <div class="square"><h2>Notre collaboration avec Voies Navigables de France (VNF)</h2>
+            <div class="container2">
+                <img src="/Images_Site/vnf.jpg">
+                <img src="/Images_Site/Replantons_le_canal.png">
+            </div>
+
+
+            <p>
+
+
+                Le Half du Lauragais se déroule sur le lac de la Thésauque qui est alimenté par un ruisseau affluent de
+                la Garonne et proche du Canal du Midi.</br>
+                Joyau architectural exceptionnel inscrit au patrimoine mondial de l’Humanité par l’UNESCO, le canal du
+                Midi est aujourd’hui atteint par la maladie du chancre coloré, un champignon microscopique qui décime
+                ses platanes en quelques mois seulement et menace toute sa biodiversité. Pour pallier ce fléau, une
+                seule solution existe : abattre et brûler les arbres morts ou malades, replanter de nouvelles essences,
+                consolider les berges et protéger la biodiversité animal.</br></br>
+
+                Dans cette optique, le Half du Lauragais offre à tous les participants la possibilité de participer à la
+                replantation des arbres du Canal du Midi en versant un euro symbolique supplémentaire lors de leur
+                inscription – attention il est nécessaire de cocher la case adéquate.</br></br>
+
+                A ce jour, 30 100 platanes ont été abattus, 16 700 arbres replantés, 57km de berges restaurées et 1350
+                nichoirs installés.</br>
+                Pour aller plus loin n’hésitez pas à consulter le site internet VNF :<a
+                        href="https://www.replantonslecanaldumidi.fr/" target="_blank">“Replantons le canal du Midi”</a>
+
+            </p>
+            <div id="slider">
+                <img src="/Images_Site/carouselle_en_bas_1.jpg" alts="La forêt de peupliers" id="slide" class="fade">
+                <div id="precedent" onclick="ChangeSlide(-1)"><</div>
+                <div id="suivant" onclick="ChangeSlide(1)">></div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script>
+        const slide = ["/Images_Site/carouselle_en_bas_1.jpg", "/Images_Site/carouselle_en_bas_2.jpg", "/Images_Site/carouselle_en_bas_3.jpg", "/Images_Site/carouselle_en_bas_4.jpg"];
+        let numero = 0;
+
+        function ChangeSlide(sens) {
+            numero = numero + sens;
+            if (numero < 0)
+                numero = slide.length - 1;
+            if (numero > slide.length - 1)
+                numero = 0;
+            const slideElement = document.getElementById("slide");
+            slideElement.classList.remove("fade"); // Supprime la classe pour la transition
+            setTimeout(() => {
+                slideElement.src = slide[numero];
+                slideElement.classList.add("fade"); // Ajoute la classe pour la transition
+            }, 50); // Une petite pause avant de changer l'image pour laisser la transition fonctionner
+        }
+
+    </script>
+
+{% endblock %}
