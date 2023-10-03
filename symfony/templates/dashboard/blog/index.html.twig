@@ -22,7 +22,7 @@
             <tr>
                 <td>{{ post.id }}</td>
                 <td>{{ post.title }}</td>
-                <td>{{ post.createdAt|date("m/d/Y") }}</td>
+                <td>{{ post.createdAt|date("H:I:S m/d/Y") }}</td>
                 <td>
                     <a href="{{ path('app_dashboard_blog_edit', {'id': post.id}) }}" class="button-primary">Modifier</a>
                 </td>
