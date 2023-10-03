@@ -10,11 +10,8 @@
         "doctrine/doctrine-bundle": "^2.10",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.16",
-<<<<<<< HEAD
-=======
         "gedmo/doctrine-extensions": "^3.13",
         "stof/doctrine-extensions-bundle": "^1.8",
->>>>>>> fb9cbb8c40b41d0ba54b73ccb779ec1d9d258116
         "symfony/asset": "6.3.*",
         "symfony/console": "6.3.*",
         "symfony/dotenv": "6.3.*",

@@ -1,6 +1,4 @@
 {
-<<<<<<< HEAD
-=======
     "doctrine/annotations": {
         "version": "2.0",
         "recipe": {
@@ -10,7 +8,6 @@
             "ref": "64d8583af5ea57b7afa4aba4b159907f3a148b05"
         }
     },
->>>>>>> fb9cbb8c40b41d0ba54b73ccb779ec1d9d258116
     "doctrine/doctrine-bundle": {
         "version": "2.10",
         "recipe": {
@@ -38,8 +35,6 @@
             "migrations/.gitignore"
         ]
     },
-<<<<<<< HEAD
-=======
     "stof/doctrine-extensions-bundle": {
         "version": "1.8",
         "recipe": {
@@ -52,7 +47,6 @@
             "config/packages/stof_doctrine_extensions.yaml"
         ]
     },
->>>>>>> fb9cbb8c40b41d0ba54b73ccb779ec1d9d258116
     "symfony/console": {
         "version": "6.3",
         "recipe": {
