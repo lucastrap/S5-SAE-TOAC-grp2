@@ -1,0 +1,94 @@
+.container4 {
+display: flex;
+justify-content: center;
+align-items: center;
+max-height: 590px; /* Hauteur maximale du conteneur */
+overflow: hidden;
+
+}@media (orientation: portrait) {
+.container4 {
+    max-height: 400px;
+}
+}
+
+.container4 img {
+width: 100%; /* Laissez la largeur se régler automatiquement en fonction de la hauteur maximale */
+max-height: none; /* Ajustez la hauteur de l'image en fonction de la hauteur maximale du conteneur */
+
+}
+
+.overlay {
+position: absolute;
+top: 0;
+
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.2); /* Couleur noire avec une opacité de 0.5 (50%) */
+z-index: 1; /* Placez l'écran noir au-dessus de l'image (z-index) */
+}
+.overlay-content {
+position: absolute;
+text-align: center;
+color: #fff;
+font-size: 24px; /* Taille de police plus grande (modifiable selon vos besoins) */
+margin-top: 20px; /* Espace entre le bouton et le texte */
+
+
+}
+
+.button {
+padding: 10px 20px;
+background-color: #007BFF;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.button:hover {
+background-color: #cb17e3;
+}
+.large-text {
+font-size: 40px; /* Taille de police plus grande (modifiable selon vos besoins) */
+margin-top: 20px; /* Espace entre le bouton et le texte */
+text-align: center; /* Centrez le texte horizontalement */
+color: #fff; /* Couleur du texte */
+}
+.video-container {
+
+text-align: center; /* Centrez la vidéo horizontalement */
+margin-top: 60px; /* Espace entre le texte et la vidéo */
+height: 100vh;
+}
+@media(orientation:portrait){
+.video-container{
+    height: 60vh;
+    width: 100vw;
+}
+}
+.grid-container2 {
+max-height: 500px;
+    display: flex;
+    justify-content: space-between; /* Espacement égal entre les éléments */
+    margin-top: 20px; /* Espace au-dessus de la grille */
+    margin-bottom: 10%;
+}
+
+/* Style des éléments de la grille */
+.grid-item2 {
+    display: flex;
+    width: 48%; /* Largeur de chaque élément (avec un petit espacement entre eux) */
+    padding: 10px;
+    align-items: center;
+    border: 1px solid #ccc; /* Bordure grise */
+    transition: background-color 0.3s; /* Animation de transition pour le hover */
+}
+
+/* Effet hover */
+.grid-item2:hover {
+    background-color: #0d020246; /* Couleur de fond au survol */
+    color: white; /* Couleur du texte au survol */
+    cursor: pointer; /* Curseur de type main au survol */
+}

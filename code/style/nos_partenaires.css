@@ -1,0 +1,53 @@
+
+.square {
+margin-top: 10%;
+width: 60%;
+
+}
+
+    .container{
+        color: rgb(68, 68, 68);
+        font-family: Arial, sans-serif;
+        text-align: left; /* Le texte sera centré horizontalement */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+   
+.container2 {
+margin-top: 10%;
+display: flex; /* Utilisez un conteneur flexible pour centrer les images */
+justify-content: center; /* Centrez horizontalement les éléments enfants */
+align-items: center; /* Centrez verticalement les éléments enfants */
+gap: 10%;
+margin-bottom: 2%;
+}
+
+.container2_2 img{
+width: 100%; /* Définissez la largeur à 100% pour que les images soient de la même taille */
+max-width: 80%; /* Vous pouvez définir une largeur maximale si nécessaire */
+height: auto; /* Permettez à la hauteur de s'ajuster automatiquement pour maintenir les proportions */
+margin-left: 5%;
+}
+.container2_3 img {
+width: 7%;
+max-width: 80%;
+height: auto;
+margin-left: 5px; /* Ajoutez cette ligne pour réduire la marge gauche entre les images */
+}
+
+
+.image-container {
+display: flex;
+justify-content: center;
+grid-column: auto auto;
+}
+.centered-logos {
+
+gap:10%;
+display: flex;
+justify-content: center; /* Centrer horizontalement */
+align-items: center; /* Centrer verticalement */
+height: 100%; /* Assurez-vous que la div parente prend toute la hauteur disponible */
+}
