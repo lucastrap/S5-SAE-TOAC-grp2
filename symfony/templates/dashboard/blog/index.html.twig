@@ -1,7 +1,11 @@
 {% extends "layouts/dashboard/base.html.twig" %}
 
 {% block title %}Blog{% endblock %}
-{% block description %}Consulter, créer et modifier les publications du site.{% endblock %}
+{% block subtitle %}Consulter, créer et modifier les publications du site.{% endblock %}
+
+{% block action %}
+<a href="/" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all">Nouvelle publication</a>
+{% endblock %}
 
 {% block body %}
     accueil du blog todo: lister puis créer / éditer publications

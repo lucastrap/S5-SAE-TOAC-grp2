@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triathlon de Nailloux | Half du Lauragais</title>
     {{ encore_entry_link_tags('app') }}
@@ -16,15 +17,25 @@
     {% include "layouts/dashboard/sidebar.html.twig" %}
 
     <div id="dashboard" class="pl-[200px] bg-white min-h-screen">
-        <div class="pt-6 px-6">
-            <div class="mb-4">
-                <h1 class="text-xl">{% block title %}{% endblock %}</h1>
-                <p class="text-neutral-500 text-sm mb-2">{% block description %}{% endblock %}</p>
-                <hr>
-            </div>
+        {% if block("title") is defined %}
+            <div class="pt-6 px-6">
+                <div class="mb-4">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h1 class="text-xl">{% block title %}{% endblock %}</h1>
+                            {% if block("subtitle") is defined %}
+                                <p class="text-neutral-500 text-sm mb-2">{% block subtitle %}{% endblock %}</p>
+                            {% endif %}
+                        </div>
 
-            {% block body %}{% endblock %}
-        </div>
+                        {% block action %}{% endblock %}
+                    </div>
+                    <hr>
+                </div>
+
+                {% block body %}{% endblock %}
+            </div>
+        {% endif %}
     </div>
 </body>
 <script src="{{ asset('js/parallax.js') }}" defer></script>
