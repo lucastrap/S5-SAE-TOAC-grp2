@@ -16,7 +16,7 @@
 <body>
     {% include "layouts/dashboard/sidebar.html.twig" %}
 
-    <div id="dashboard" class="pl-[200px] bg-white min-h-screen">
+    <div id="dashboard" class="pl-[200px] bg-neutral-50 min-h-screen">
         {% if block("title") is defined %}
             <div class="pt-6 px-6">
                 <div class="mb-4">
@@ -28,7 +28,9 @@
                             {% endif %}
                         </div>
 
-                        {% block action %}{% endblock %}
+                        <div class="flex items-center gap-2">
+                            {% block action %}{% endblock %}
+                        </div>
                     </div>
                     <hr>
                 </div>

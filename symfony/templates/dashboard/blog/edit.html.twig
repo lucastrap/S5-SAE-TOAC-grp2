@@ -5,9 +5,9 @@
 
 {% block action %}
     {{ include('dashboard/blog/_delete_form.html.twig') }}
+    <a href="{{ path('app_dashboard_blog_index') }}" class="button-primary">Retour</a>
 {% endblock %}
 
 {% block body %}
-    {{ include('dashboard/blog/_form.html.twig', {'button_label': 'Update'}) }}
-
+    {{ include('dashboard/blog/_form.html.twig', {'button_label': 'Sauvegarder'}) }}
 {% endblock %}

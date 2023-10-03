@@ -13,3 +13,19 @@ body {
 .button-danger {
     @apply bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 transition-all;
 }
+
+input[type="text"], textarea {
+    @apply border border-neutral-200 bg-white rounded-md px-2 py-1 hover:outline-blue-500;
+}
+
+table {
+    @apply border border-neutral-200 bg-white rounded-md px-4 py-2 hover:outline-blue-500;
+}
+
+th {
+    @apply border border-neutral-200 bg-white rounded-md px-4 py-2 hover:outline-blue-500;
+}
+
+td {
+    @apply border border-neutral-200 bg-white rounded-md px-4 py-2 hover:outline-blue-500 text-center;
+}

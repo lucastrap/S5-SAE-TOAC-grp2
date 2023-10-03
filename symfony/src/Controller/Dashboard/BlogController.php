@@ -42,14 +42,6 @@ class BlogController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_dashboard_blog_show', methods: ['GET'])]
-    public function show(Post $post): Response
-    {
-        return $this->render('dashboard/blog/show.html.twig', [
-            'post' => $post,
-        ]);
-    }
-
     #[Route('/{id}/edit', name: 'app_dashboard_blog_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Post $post, EntityManagerInterface $entityManager): Response
     {

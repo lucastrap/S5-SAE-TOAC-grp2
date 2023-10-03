@@ -4,17 +4,17 @@
 {% block subtitle %}Consulter, créer et modifier les publications du site.{% endblock %}
 
 {% block action %}
-<a href="{{ path('app_dashboard_blog_new') }}" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all">Nouvelle publication</a>
+    <a href="{{ path('app_dashboard_blog_new') }}" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all">Nouvelle publication</a>
 {% endblock %}
 
 {% block body %}
-    <table class="table">
+    <table class="w-full">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Content</th>
-                <th>actions</th>
+                <th>#</th>
+                <th>Titre</th>
+                <th>Création</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -22,10 +22,9 @@
             <tr>
                 <td>{{ post.id }}</td>
                 <td>{{ post.title }}</td>
-                <td>{{ post.content }}</td>
+                <td>{{ post.createdAt|date("m/d/Y") }}</td>
                 <td>
-                    <a href="{{ path('app_dashboard_blog_show', {'id': post.id}) }}">show</a>
-                    <a href="{{ path('app_dashboard_blog_edit', {'id': post.id}) }}">edit</a>
+                    <a href="{{ path('app_dashboard_blog_edit', {'id': post.id}) }}" class="button-primary">Modifier</a>
                 </td>
             </tr>
         {% else %}
