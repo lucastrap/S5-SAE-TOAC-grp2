@@ -1,0 +1,38 @@
+{% extends 'layouts/dashboard/base.html.twig' %}
+
+{% block title %}Course{% endblock %}
+
+{% block body %}
+    <h1>Course</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th class="w-auto">Id</th>
+                <td class="w-auto">{{ course.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ course.titre }}</td>
+            </tr>
+            <tr>
+                <th>Format</th>
+                <td>{{ course.format }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ course.prix }}</td>
+            </tr>
+            <tr>
+                <th>Challenge</th>
+                <td>{{ course.challenge }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_dashboard_course_index') }}">back to list</a>
+
+    <a href="{{ path('app_dashboard_course_edit', {'id': course.id}) }}">edit</a>
+
+    {{ include('dashboard/course/_delete_form.html.twig') }}
+{% endblock %}

@@ -54,9 +54,38 @@
       <path value="$PROJECT_DIR$/symfony/vendor/symfony/polyfill-php83" />
       <path value="$PROJECT_DIR$/symfony/vendor/symfony/finder" />
       <path value="$PROJECT_DIR$/symfony/vendor/symfony/runtime" />
+      <path value="$PROJECT_DIR$/symfony/vendor/gedmo/doctrine-extensions" />
+      <path value="$PROJECT_DIR$/symfony/vendor/stof/doctrine-extensions-bundle" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/password-hasher" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/symfony/vendor/behat/transliterator" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/cache" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>
