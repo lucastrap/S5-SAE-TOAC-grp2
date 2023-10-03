@@ -4,479 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triathlon de Nailloux | Half du Lauragais</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/Si_Le_Half.css">
+    <link rel="stylesheet" href="../code/style/footer_style.css">
 </head>
 <style>
-    div {
-        outline: 1px solid red;
-    }
-
-    body {
-        margin: 0;
-        font-size: 16px; /* Utilisez des unités relatives pour la taille de police */
-        
-    }
-
-    .bandeau-blanc {
-        display: flex;
-        align-items: stretch;
-    }
-
-    .bandeau_gauche {
-        background-image: url('../Images_Site/index_top.jpg');
-        background-size: 35%;
-        background-position: left;
-        margin-left: 2%;
-        background-repeat: no-repeat;
-        color: white;
-        padding: 2%;
-        text-align: center;
-        width: 100%; /* Pour occuper la largeur complète sur les petits écrans */
-        box-sizing: border-box; /* Gardez la largeur totale incluse dans la boîte */
-    }
-
-    .bandeau-droite {
-        margin-left: 10%;
-        margin-top: 2%;
-        flex-direction: column; /* Aligner les éléments en colonne */
-        align-items: flex-start; /* Aligner les éléments vers le bas du menu */
-        display: grid;
-        grid-template-columns: auto auto auto auto auto ;
-        gap: 1%;
-        width: 50%; /* Pour occuper la largeur complète sur les petits écrans */
-        font-size: 85%;
-    }
-
-    .background {
-        background-image: url('../Images_Site/epreuves_programme.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 100vh; /* Ajustez la hauteur de l'arrière-plan pour couvrir l'écran entier */
-        display: flex;
-        grid-template-columns: auto auto auto auto;
-        gap: 8%;
-        align-items: center;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-       
-    }
-
-  .square {
-    margin-top: 10%;
-    width: 60%;
-    
-    }
-
  
-     
-    .menu-item {
-        cursor: pointer;
-        text-align: center;
-        transition: background-color 0.4s; /* Animation de transition de la couleur de fond */
-    }
 
-    .menu-item:hover {
-        background-color: #e70404; /* Couleur de fond au survol */
-   
-    }
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: #ffffff; /* Ajoutez la couleur de fond souhaitée */
-        z-index: 100; /* Assurez-vous que le header est au-dessus du contenu de la page */
-    }
-    /* Styles pour le surlignage du texte au survol */
-
-    .hidden {
-        visibility:hidden ;
-    }
-    .sous-menu {
-    
-    margin-top: 0.5%;
-    opacity: 0; /* Masquer le sous-menu par défaut en réglant l'opacité à 0 */
-    transform: scale(0.9); /* Réduire légèrement la taille du sous-menu */
-    transition: opacity 0.2s, transform 0.5s; /* Ajouter une transition pour l'opacité et la taille */
-    position: absolute;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1; /* Assurez-vous que le sous-menu est au-dessus du reste du contenu */
-}
-
-
-
-      /* Styles pour les éléments du sous-menu */
-    .sous-menu-item {
-        padding: 10px;
-        text-align: left;
-        width: 150px;
-        cursor: pointer;
-        transition: all 0.5s;
-    }
-
-    .sous-menu-item:hover{
-        background-color: #cccccc; /* Couleur de fond au survol */
-    }
-
-   .menu-item:hover .sous-menu {
-    opacity: 1; /* Afficher le sous-menu en réglant l'opacité à 1 */
-    transform: scale(1); /* Rétablir la taille normale du sous-menu */
-    }
-
-    .svg{
-        cursor:pointer;
-      margin-left: 75%;
-    }
-    .insta{
-        margin-right:80%;
-        cursor:pointer;
-    }
-
-    /* Utilisez une règle de média query pour ajuster la mise en page sur les petits écrans */
-    @media (max-width: 768px) {
-        .bandeau_gauche {
-            width: 100%;
-        }
-
-        .bandeau-droite {
-            width: 100%;
-        }
-    }
-   
-        .container{
-            color: rgb(68, 68, 68);
-            font-family: Arial, sans-serif;
-            text-align: left; /* Le texte sera centré horizontalement */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        h1 {
-            font-size: 33px;
-            font-weight: bold;
-        }
-        h2 {
-            font-size: 24px;
-        }
-        h3{
-            font-size: 16px;
-            font-weight: bolder;
-            margin-top: 8%;
-      
-        }
-        p {
-            font-size: 14px;
-            text-align: left; /* Le texte du paragraphe reste aligné à gauche */
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-        h4{
-
-        }
-        ul {
-            text-align: left;
-            margin-left: 40px;
-        }
-    
-        a {
-            text-decoration: none;
-            color: #007BFF;
-        }
-      
-      
-        #slider {
-            user-select: none;
-            position: relative;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            margin-bottom: 10%;
-            height: 400px; /* Hauteur de la div */
-            overflow: hidden; /* Pour s'assurer que l'image ne dépasse pas la div */
-        }
-
-#precedent,
-#suivant {
-    cursor: pointer;
-    transition: opacity 0.4s ease;
-    opacity: 0;
-    position: absolute;
-    font-size: 50px;
-
-    color: rgba(220, 220, 220, 0.8);
-    background-color: rgba(45, 44, 44, 0.8);
-    padding: 10px;
-}
-.fade {
-    animation-name: fade;
-    animation-duration: 1s;
-}
-
-@keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.container2 {
-    margin-top: 10%;
-  display: flex; /* Utilisez un conteneur flexible pour centrer les images */
-  justify-content: center; /* Centrez horizontalement les éléments enfants */
-  align-items: center; /* Centrez verticalement les éléments enfants */
-    gap: 10%;
-    margin-bottom: 2%;
-}
-
-.container2_2 img{
-  width: 100%; /* Définissez la largeur à 100% pour que les images soient de la même taille */
-  max-width: 80%; /* Vous pouvez définir une largeur maximale si nécessaire */
-  height: auto; /* Permettez à la hauteur de s'ajuster automatiquement pour maintenir les proportions */
-margin-left: 5%;
-}
-.container2_3 img {
-  width: 7%;
-  max-width: 80%;
-  height: auto;
-  margin-left: 5px; /* Ajoutez cette ligne pour réduire la marge gauche entre les images */
-}
-
-#precedent {
-    left: 0;
-}
-
-#suivant {
-    right: 0;
-}
-
-#slider:hover #precedent,
-#slider:hover #suivant {
-    opacity: 1;
-}
-.image-container {
-    display: flex;
-    justify-content: center;
-    grid-column: auto auto;
-}
-.centered-logos {
-    
-    gap:10%;
-    display: flex;
-    justify-content: center; /* Centrer horizontalement */
-    align-items: center; /* Centrer verticalement */
-    height: 100%; /* Assurez-vous que la div parente prend toute la hauteur disponible */
-}
-.page{
-    min-height: 100vh;
-    padding-top: 5%;
-    font-size: 16px;
-    background-image: url("/Images_Site/marek.jpg"); /* Couleur grise, vous pouvez ajuster la couleur en fonction de vos préférences */
-    color: white;
-    background-size: cover; /* Pour redimensionner automatiquement l'image pour remplir l'arrière-plan */
-    background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
-    background-attachment: fixed; /* Pour que l'image reste fixe lorsque vous faites défiler la page */
-
-}
-
-.title {
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 5%;
-        font-size: 30px;
-    }
-
-    /* Styles pour la grille de 3 colonnes */
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 5%;
-        margin: 15px auto;
-        max-width: 55%; /* Ajustez la largeur selon vos besoins */
-        min-width: 80vh;
-    }
-    .grid-item:hover img {
-        transform: scale(1.02); /* Redimensionnez légèrement l'image */
-        transition: transform 0.3s ease; /* Ajoutez une transition fluide */
-        
-    }
-    /* Styles pour chaque carré dans la grille */
-    .grid-item {
-        text-align: center;
-        border-radius: 2%;
-
-    }
-
-    /* Styles pour les images dans chaque carré */
-    .grid-item img {
-        width: 100%;
-        height: 80%;    object-fit: cover; /* L'image dépassera du conteneur tout en maintenant ses proportions */
-        border-radius: 2%;
-       
-    }
-
-    /* Styles pour le texte sous chaque image */
-    .grid-item p {
-        margin-top: 20%;
-        font-size: 16px;
-    }
-    .test-button {
-    background-color: pink; /* Couleur rose */
-    color: white; /* Couleur du texte en blanc */
-    padding: 10px 20px; /* Espacement intérieur du bouton */
-    border: none; /* Supprimez la bordure */
-    cursor: pointer;
-    transition: background-color 0.4s; /* Animation de transition de la couleur de fond */
-}
-.test-button:hover {
-    background-color: #ff69b4; /* Nouvelle couleur de fond au survol */
-    /* Ajoutez ici votre animation JavaScript */
-}.container4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-height: 590px; /* Hauteur maximale du conteneur */
-overflow: hidden;
- 
-}@media (orientation: portrait) {
-    .container4 {
-        max-height: 400px;
-    }
-}
-
-.container4 img {
-    width: 100%; /* Laissez la largeur se régler automatiquement en fonction de la hauteur maximale */
-    max-height: none; /* Ajustez la hauteur de l'image en fonction de la hauteur maximale du conteneur */
-    
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); /* Couleur noire avec une opacité de 0.5 (50%) */
-    z-index: 1; /* Placez l'écran noir au-dessus de l'image (z-index) */
-}
-.overlay-content {
-    position: absolute;
-    text-align: center;
-    color: #fff;
-    font-size: 24px; /* Taille de police plus grande (modifiable selon vos besoins) */
-    margin-top: 20px; /* Espace entre le bouton et le texte */
-
-  
-}
-
-.button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #cb17e3;
-}
-.large-text {
-    font-size: 40px; /* Taille de police plus grande (modifiable selon vos besoins) */
-    margin-top: 20px; /* Espace entre le bouton et le texte */
-    text-align: center; /* Centrez le texte horizontalement */
-    color: #fff; /* Couleur du texte */
-}
-.video-container {
-
-    text-align: center; /* Centrez la vidéo horizontalement */
-    margin-top: 60px; /* Espace entre le texte et la vidéo */
-    height: 100vh;
-}
-@media(orientation:portrait){
-    .video-container{
-        height: 60vh;
-        width: 100vw;
-    }
-}
-.grid-container2 {
-    max-height: 500px;
-        display: flex;
-        justify-content: space-between; /* Espacement égal entre les éléments */
-        margin-top: 20px; /* Espace au-dessus de la grille */
-        margin-bottom: 10%;
-    }
-
-    /* Style des éléments de la grille */
-    .grid-item2 {
-        display: flex;
-        width: 48%; /* Largeur de chaque élément (avec un petit espacement entre eux) */
-        padding: 10px;
-        align-items: center;
-        border: 1px solid #ccc; /* Bordure grise */
-        transition: background-color 0.3s; /* Animation de transition pour le hover */
-    }
-
-    /* Effet hover */
-    .grid-item2:hover {
-        background-color: #0d020246; /* Couleur de fond au survol */
-        color: white; /* Couleur du texte au survol */
-        cursor: pointer; /* Curseur de type main au survol */
-    }
 </style>
 
 <body>
-    <div class="header">
-        <div class="bandeau-blanc">              
-            </div>
-            <div class="bandeau-droite">
-            
-                    <div class="menu-item">LES ÉPREUVES
-                        <div class="sous-menu">
-                            <div class="sous-menu-item">Programme</div>
-                            <div class="sous-menu-item">Courses</div>
-                            <div class="sous-menu-item">Résultats</div>
-                        </div>
-                    </div>
-                    <div class="menu-item">ÉCORESPONSABLE
-                        <div class="sous-menu">
-                            <div class="sous-menu-item">Triathlon durable</div>
-                            <div class="sous-menu-item">Replantons le canal du midi</div>
-                        </div>
-                    </div>
-                    <div class="menu-item">MÉDIAS
-                        <div class="sous-menu">
-                            <div class="sous-menu-item">Photos 2023</div>
-                            <div class="sous-menu-item">Photos 2022 et avant</div>
-                            <div class="sous-menu-item">Nos partenaires</div>
-                            <div class="sous-menu-item">Fil d'Actus</div>
-                        </div>
-                    </div>
-                  
-                    <div class="svg">
-                        <svg fill="#000000" width="15px" height="15px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1168.737 487.897c44.672-41.401 113.824-36.889 118.9-36.663l289.354-.113 6.317-417.504L1539.65 22.9C1511.675 16.02 1426.053 0 1237.324 0 901.268 0 675.425 235.206 675.425 585.137v93.97H337v451.234h338.425V1920h451.234v-789.66h356.7l62.045-451.233H1126.66v-69.152c0-54.937 14.214-96.112 42.078-122.058" fill-rule="evenodd"/>
-                        </svg>
-                        
-                    </div>
-                    <div class="insta">
-                        <svg width="15px" height="15px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#0F0F0F"/>
-                            <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#0F0F0F"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#0F0F0F"/>
-                            </svg>
-                    </div>
-                   
-            </div>
-        
+    <div class="bandeau-blanc">
+        <div class="bandeau_gauche">
+          
         </div>
+        <div class="bandeau-droite">
+        
+                <div class="menu-item">LES ÉPREUVES
+                    <div class="sous-menu">
+                        <div class="sous-menu-item"><a href="../code/programme.html">Programme</a></div>
+                        <div class="sous-menu-item"><a href="../code/courses.html">Courses</a></div>
+                        <div class="sous-menu-item"><a href="../code/resultat.html">Résultats</a></div>
+                    </div>
+                </div>
+                <div class="menu-item">ÉCORESPONSABLE
+                    <div class="sous-menu">
+                        <div class="sous-menu-item"><a href="../code/ecoresponsable.html">Triathlon durable</a></div>
+                        <div class="sous-menu-item"><a href="../code/CanalMidi.html">Replantons le canal du midi</a></div>
+                    </div>
+                </div>
+                <div class="menu-item">MÉDIAS
+                    <div class="sous-menu">
+                        <div class="sous-menu-item"><a href="https://linktr.ee/halfdulauragais" target="_blank">Photos 2023</a></div>
+                        <div class="sous-menu-item"><a href="https://www.flickr.com/photos/156439498@N08/albums" target="_blank">Photos 2022 et avant</a></div>
+                        <div class="sous-menu-item"><a href="../code/nos_partenaires.html">Nos partenaires</a></div>
+                        <div class="sous-menu-item"><a href="../code/news.html">Fil d'Actus</a></div>
+                    </div>
+                </div>
+              
+                <div class="svg, menu-item">
+                    <svg fill="#293073" width="30px" height="30px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1168.737 487.897c44.672-41.401 113.824-36.889 118.9-36.663l289.354-.113 6.317-417.504L1539.65 22.9C1511.675 16.02 1426.053 0 1237.324 0 901.268 0 675.425 235.206 675.425 585.137v93.97H337v451.234h338.425V1920h451.234v-789.66h356.7l62.045-451.233H1126.66v-69.152c0-54.937 14.214-96.112 42.078-122.058" fill-rule="evenodd"/>
+                    </svg>
+                    
+                </div>
+                <div class="insta, menu-item">
+                    <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#293073"/>
+                        <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#293073"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#293073"/>
+                        </svg>
+                </div>
+               
+        </div>
+    
     </div>
  <div class="container4">
     <img src="/Images_Site/actus_2.jpg">
@@ -496,6 +77,17 @@ overflow: hidden;
 </div>
 
 </body>
-
-
+<footer>
+    <a href="mailto:inscription-nailloux@googlegroups.com">
+        <div class="container">
+            <img src="../Images_Site/envelope.png" class = "envelope" style="width: 40px; height: 40px; margin: 0;">
+            <div class="circle-border"></div>
+        </div>
+    </a>   
+    <div class="copyright">
+        <p>
+            © 2021 Half du Lauragais
+        </p>
+    </div>
+</footer>
 </html>

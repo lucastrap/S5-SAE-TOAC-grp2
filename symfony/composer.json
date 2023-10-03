@@ -10,13 +10,21 @@
         "doctrine/doctrine-bundle": "^2.10",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.16",
+<<<<<<< HEAD
+=======
+        "gedmo/doctrine-extensions": "^3.13",
+        "stof/doctrine-extensions-bundle": "^1.8",
+>>>>>>> fb9cbb8c40b41d0ba54b73ccb779ec1d9d258116
         "symfony/asset": "6.3.*",
         "symfony/console": "6.3.*",
         "symfony/dotenv": "6.3.*",
         "symfony/flex": "^2",
+        "symfony/form": "6.3.*",
         "symfony/framework-bundle": "6.3.*",
         "symfony/runtime": "6.3.*",
+        "symfony/security-csrf": "6.3.*",
         "symfony/twig-bundle": "6.3.*",
+        "symfony/validator": "6.3.*",
         "symfony/webpack-encore-bundle": "^2.1",
         "symfony/yaml": "6.3.*"
     },
