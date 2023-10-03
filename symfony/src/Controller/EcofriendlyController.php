@@ -11,7 +11,6 @@ class EcofriendlyController extends AbstractController
     #[Route('/ecofriendly', name: 'ecofriendly')]
     public function index(): Response
     {
-        return $this->render('ecofriendly/index.html.twig', [
-        ]);
+        return $this->render('ecofriendly/index.html.twig');
     }
 }
