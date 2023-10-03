@@ -1,15 +1,16 @@
-<aside class="bg-red-500">
-    <div>Bienvenue</div>
+<aside class="fixed px-2 top-0 left-0 w-[200px] h-screen overflow-y-auto bg-neutral-50 border-r shadow-lg border-neutral-200">
+    <div class="text-center my-4 text-xs uppercase font-light">Administration</div>
 
-    <ul>
+    <ul class="mt-4 space-y-2">
         <li>
-            <a href="/">Courses</a>
+            <a href="/" class="block px-4 py-2 transition-all rounded-md hover:bg-blue-400 hover:text-white">Courses</a>
         </li>
         <li>
-            <a href="/">Blog</a>
+            <a href="{{ path('dashboard_blog') }}" class="block px-4 py-2 transition-all rounded-md hover:bg-blue-400 hover:text-white">Blog</a>
         </li>
+        <hr>
         <li>
-            <a href="/">Retour au site</a>
+            <a href="/" class="block px-4 py-2 transition-all rounded-md hover:bg-blue-400 hover:text-white">Retour au site</a>
         </li>
     </ul>
 </aside>

@@ -1,0 +1,46 @@
+{% extends 'layouts/default/base.html.twig' %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('style/news.css') }}">
+    <div class="page">
+        <div class="title">Les Dernières News</div>
+
+        <!-- Grille de 3 colonnes avec images et texte -->
+        <div class="grid">
+            <!-- Carré 1 -->
+            <div class="grid-item">
+                <img src="/Images_Site/actus_1.jpg" alt="Image 1">
+                <div class="item-text">
+                    <a href="">Edition 2023</a></br>
+                    <strong>Guide Athlète 2023 !</strong>
+                    <h3>Votre guide athlète 2023 !</h3>
+                </div>
+            </div>
+
+            <!-- Carré 2 -->
+            <div class="grid-item">
+                <img src="/Images_Site/actus_2.jpg" alt="Image 2">
+                <div class="item-text">
+                    <a href="">Edition 2023</a></br>
+                    <h3>Si le Half du Lauragais était...</h3>
+                </div>
+            </div>
+
+            <!-- Carré 3 -->
+            <div class="grid-item">
+                <img src="/Images_Site/Index.jpg" alt="Image 3">
+                <div class="item-text">
+                    <a href="">Edition 2023</a></br>
+                    <h3>Les inscriptions sont ouvertes !</h3>
+                </div>
+            </div>
+        </div>
+        <!-- Bouton "Test" -->
+        <!-- Bouton "Voir toutes les publications" -->
+        <div class="container">
+            <button class="test-button"style="margin-top:5%">Voir toutes les publications</button>
+        </div>
+
+
+    </div>
+{% endblock %}

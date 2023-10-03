@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triathlon de Nailloux | Half du Lauragais</title>
     {{ encore_entry_link_tags('app') }}
-    <link rel="stylesheet" href="{{ asset('style/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('style/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('style/footer_style.css') }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -21,8 +15,16 @@
 <body>
     {% include "layouts/dashboard/sidebar.html.twig" %}
 
-    <div id="dashboard" style="padding-left: 200px;">
-        {% block body %}{% endblock %}
+    <div id="dashboard" class="pl-[200px] bg-white min-h-screen">
+        <div class="pt-6 px-6">
+            <div class="mb-4">
+                <h1 class="text-xl">{% block title %}{% endblock %}</h1>
+                <p class="text-neutral-500 text-sm mb-2">{% block description %}{% endblock %}</p>
+                <hr>
+            </div>
+
+            {% block body %}{% endblock %}
+        </div>
     </div>
 </body>
 <script src="{{ asset('js/parallax.js') }}" defer></script>
