@@ -1,0 +1,8 @@
+{% extends "layouts/dashboard/base.html.twig" %}
+
+{% block title %}Création d'une publication{% endblock %}
+{% block subtitle %}Modifier le titre ou le contenu de la publication.{% endblock %}
+
+{% block body %}
+    {{ include('dashboard/blog/_form.html.twig') }}
+{% endblock %}
