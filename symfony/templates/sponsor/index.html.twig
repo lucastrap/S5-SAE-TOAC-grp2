@@ -1,0 +1,26 @@
+{% extends 'layouts/default/base.html.twig' %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('style/sponsor.css') }}">
+    <div class="container">
+        <div class="square">
+            <h3>Nos sponsors et partenaires institutionnels</h3>
+            <div class="image-container"> <!-- Ajoutez cette div parent -->
+                <div class="container2_2">
+                    <img src="{{ asset('assets/partenaires.jpg') }}">
+                </div>
+            </div>
+        </div>
+        <div class="square">
+            <div class="image-container">
+                <div class="container2_3">
+                    <!-- La nouvelle div parente pour les logos -->
+                    <div class="centered-logos">
+                        <img src="{{ asset('assets/logo_1.jpg') }}">
+                        <img src="{{ asset('assets/logo_2.png') }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
