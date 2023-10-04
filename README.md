@@ -5,6 +5,7 @@
 - [Thomas Deyemere](https://github.com/bsct-tormod)
 - [Matéo Pepin](https://github.com/SOLUPRED3)
 - [Hai Son Dang](https://github.com/haisondang)
+- [Olivier Recher](https://github.com/OlivierRecher)
 
 ## Contexte du projet
 Ce dépôt GitHub a été créé pour le projet SAE5.A.01 - Développement avancé. Son objectif est pour réaliser une application réelle avec un client réel.
