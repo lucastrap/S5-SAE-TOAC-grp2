@@ -3,10 +3,12 @@
 {% block title %}Courses{% endblock %}
 {% block subtitle %}Gestion des courses{% endblock %}
 
-{% block body %}
-    <h1>Course index</h1>
+{% block action %}
+    <a class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-2xl" href="{{ path('app_dashboard_course_new') }}">Nouvelle course</a>
 
-    <table class="w-full">
+{% endblock %}
+{% block body %}
+    <table class="w-full mb-5">
         <thead>
             <tr>
                 <th>Id</th>
@@ -14,7 +16,7 @@
                 <th>Format</th>
                 <th>Prix</th>
                 <th>Challenge</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -26,17 +28,14 @@
                 <td>{{ course.prix }}</td>
                 <td>{{ course.challenge }}</td>
                 <td>
-                    <a href="{{ path('app_dashboard_course_show', {'id': course.id}) }}">show</a>
-                    <a href="{{ path('app_dashboard_course_edit', {'id': course.id}) }}">edit</a>
+                    <a class="bg-yellow-500 hover:bg-yellow-700 text-white py-2 px-4 rounded-full" href="{{ path('app_dashboard_course_edit', {'id': course.id}) }}">Éditer</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">no records found</td>
+                <td colspan="6" class="italic">Aucun élément trouvé...</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('app_dashboard_course_new') }}">Create new</a>
 {% endblock %}
