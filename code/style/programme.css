@@ -20,7 +20,32 @@
     width: 120%;
     padding-right: 10%;
     display: flex;
+    flex-direction: column; /* Permet au contenu d'être empilé verticalement */
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s; /* Ajoute une transition pour la transformation */
+    color: white; /* Couleur du texte par défaut */
+    transition: transform 0.3s, background-color 0.3s; /* Ajoute une transition pour la transformation et la couleur de fond */
+
+}
+
+.square h2,
+.square p {
+    margin: 0;
+    text-align: center;
+    opacity: 1; /* Rend le texte visible par défaut */
+}
+
+.square.hovered {
+    background-color: rgba(0, 0, 0, 0.8); /* Changez la couleur de fond au survol */
+    transform: scale(1.1); /* Effectuez une légère mise à l'échelle au survol */
+    height: 35%;
+    width: 120%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+    color: white;
+    opacity: 1; /* Fait apparaître le texte au survol */
 }

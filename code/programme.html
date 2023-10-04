@@ -57,10 +57,42 @@
     </div>
     <div class="background">
         <div class="square hidden"></div>
-        <div class="square">Carré 1</div>
-        <div class="square">Carré 2</div>
+        <div class="square" data-content="Carré 1">
+            <h2>Titre Carré 1</h2>
+            <p>Ceci est le texte du Carré 1.</p>
+        </div>
+        
+        <div class="square" data-content="Carré 2">
+            <h2>Titre Carré 2</h2>
+            <p>Ceci est le texte du Carré 2.</p>
+        </div>
         <div class="square hidden"></div>
     </div>
+    <script>
+       const squares = document.querySelectorAll('.square');
+
+squares.forEach(square => {
+    const defaultContent = square.getAttribute('data-content'); // Contenu par défaut
+    let hoverContent = ''; // Contenu au survol
+    
+    square.addEventListener('mouseenter', () => {
+        // Récupérez le contenu de survol depuis l'attribut data-hover
+        hoverContent = square.getAttribute('data-hover');
+        
+        // Changez le texte et le style du carré au survol
+        square.innerHTML = `<h2>${hoverContent}</h2>`;
+        square.classList.add('hovered');
+    });
+
+    square.addEventListener('mouseleave', () => {
+        // Rétablissez le contenu par défaut et le style lorsque le survol est terminé
+        square.innerHTML = `<h2>${defaultContent}</h2>`;
+        square.classList.remove('hovered');
+    });
+});
+
+    </script>
+    
 </body>
 <footer>
     <a href="mailto:inscription-nailloux@googlegroups.com">
