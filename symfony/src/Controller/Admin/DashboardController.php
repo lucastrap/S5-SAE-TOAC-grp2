@@ -26,13 +26,17 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('TOAC');
+            ->setTitle('TOAC')
+            ->setLocales(["fr" => "🇫🇷 Français"])
+        ;
     }
 
     public function configureMenuItems(): iterable
     {
         return [
             // MenuItem::linkToDashboard('Dashboard', 'fa fa-home'),
+
+            MenuItem::linkToRoute("Accueil", "fa fa-home", "app_index"),
 
             MenuItem::section('Blog'),
             MenuItem::linkToCrud('Articles', 'fa fa-file-text', Post::class),
