@@ -7,6 +7,7 @@
 - [Hai Son Dang](https://github.com/haisondang)
 - [Olivier Recher](https://github.com/OlivierRecher)
 - [Thomas Masin](https://github.com/caerroff)
+- [Hugo Monté](https://github.com/hugomonte)
 
 ## Contexte du projet
 Ce dépôt GitHub a été créé pour le projet SAE5.A.01 - Développement avancé. Son objectif est pour réaliser une application réelle avec un client réel.
