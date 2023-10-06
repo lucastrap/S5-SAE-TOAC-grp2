@@ -57,14 +57,18 @@ Nous travaillons avec la méthopde agile, soit par sprint d'une semaine.
 
 Phase 1 du projet : [Phase 1](https://github.com/lucastrap/S5-SAE-TOAC-grp2/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+1%22)
 
-Phase 2 du projet : [Phase 1](https://github.com/lucastrap/S5-SAE-TOAC-grp2/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+2%22)
+Phase 2 du projet : [Phase 2](https://github.com/lucastrap/S5-SAE-TOAC-grp2/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+2%22)
+
+Phase 3 du projet : A définir
 
 
 ## Liens utiles
 
-- Le [Site Toac](https://half.toac-triathlon.com/)
-- Notre version du [Site toac](https://lucastrap.github.io/S5-SAE-TOAC-grp2/)
+- La version actuelle du [Site Toac](https://half.toac-triathlon.com/)
+- Notre version actuelle du [Site toac](https://lucastrap.github.io/S5-SAE-TOAC-grp2/)
 
 ## Documents
+- [Document Technique](./documents/documentation_technique.adoc)
+- [Analyse de l'existant](./documents/AnalyseExistant.pdf)
 - [Rapport final]
-- [Autre document](docs/autre_document.pdf)
+
