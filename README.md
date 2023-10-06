@@ -4,10 +4,12 @@
 
 ## L'équipe
 
+ ### Initiaux
 - [Luca Straputicari](https://github.com/lucastrap)
 - [Thomas Deyemere](https://github.com/bsct-tormod)
 - [Matéo Pepin](https://github.com/SOLUPRED3)
 - [Hai Son Dang](https://github.com/haisondang)
+### Alternants
 - [Olivier Recher](https://github.com/OlivierRecher)
 - [Thomas Masin](https://github.com/caerroff)
 - [Hugo Monté](https://github.com/hugomonte)
@@ -15,30 +17,42 @@
 
 ## Contexte du projet
 
-Ce dépôt GitHub a été créé pour le projet SAE5.A.01 - Développement avancé.
+Ce dépôt GitHub a été créé pour le projet [SAE5.A.01](https://webetud.iut-blagnac.fr/course/view.php?id=1131).  
+
+### Si vous souhaitez accéder à notre version actuelle : [Site toac](https://lucastrap.github.io/S5-SAE-TOAC-grp2/)
 
 ### Description
 
-Notre mission est d'améliorer le site web du club TOAC Triathlon, en mettant en œuvre des fonctionnalités supplémentaires pour optimiser l'expérience des utilisateurs. Le site existant (lien : [TOAC Triathlon](https://half.toac-triathlon.com/)) est déjà en ligne, mais il nécessite des améliorations et des fonctionnalités nouvelles pour répondre aux besoins du club et de ses membres.
+Notre mission est d'améliorer le site web du club TOAC Triathlon, en mettant en œuvre des fonctionnalités supplémentaires pour optimiser l'expérience des utilisateurs. Voici le site existant (lien : [TOAC Triathlon](https://half.toac-triathlon.com/)) qui est déjà en ligne, mais il nécessite des améliorations et des fonctionnalités nouvelles pour répondre aux besoins du client. Notre correspondante pour ce projet sera [Laurène Ronfort](https://fr.linkedin.com/in/laurene-ronfort).
+
 
 ### Objectifs
 
-- Ajouter une section "Actualités" pour tenir les utilisateurs informés des dernières nouvelles et événements du club.
-- Intégrer un système de gestion des membres pour que le club puisse suivre les adhésions, les paiements et les informations de contact.
-- Créer une interface conviviale pour que les administrateurs du club puissent mettre à jour facilement le contenu du site.
+- Avoir un site principalement en scroll avec un effet parallax.
+- Proposer des solutions au client afin de lui permettre d'avoir un meilleur référencement pour le site.
+- Avoir une structuration du site plus simple.
 - Former l'équipe TOAC Triathlon à la maintenance du site web.
+- Intégrer le fil instagram de la page du [TOAC](https://www.instagram.com/toactriathlon/)
+
+### Voici un diaporama nous présentant le client et ses besoins : [Diaporama TOAC](https://docs.google.com/presentation/d/19AGVjNUYI3qM5f7slZo5BkiuPfHRaJR4KTdoPo22Uow/edit#slide=id.g27b0f7cac84_1_155)
 
 
-## Arborescence du dépôt
-Le dépôt est organisé de la manière suivante :
+## Structuration du dépot
+Nous travaillons avec la méthopde agile, soit par sprint d'une semaine.
 
 ```
 ├── Projet TOAC
-│ ├── Sprint 1
-│ ├── Sprint 2
-│ └── Sprint 3
+│ ├── Images_Site
+│ ├── code
+│ ├── docker
+│ ├── documents 
+│ └── symfony
+│
 └── README.md
 ```
+
+Phase 1 du projet : [Phase 1](https://github.com/lucastrap/S5-SAE-TOAC-grp2/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+1%22)
+
 
 ## Liens utiles
 
