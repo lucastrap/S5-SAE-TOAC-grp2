@@ -34,6 +34,10 @@ Notre mission est d'améliorer le site web du club TOAC Triathlon, en mettant en
 - Former l'équipe TOAC Triathlon à la maintenance du site web.
 - Intégrer le fil instagram de la page du [TOAC](https://www.instagram.com/toactriathlon/)
 
+### Avancement actuel du projet : 
+
+[████████████████████████████████░░░░░░░░░░░░░░░░░░░░░░] 65%
+
 ### Voici un diaporama nous présentant le client et ses besoins : [Diaporama TOAC](https://docs.google.com/presentation/d/19AGVjNUYI3qM5f7slZo5BkiuPfHRaJR4KTdoPo22Uow/edit#slide=id.g27b0f7cac84_1_155)
 
 
@@ -52,6 +56,8 @@ Nous travaillons avec la méthopde agile, soit par sprint d'une semaine.
 ```
 
 Phase 1 du projet : [Phase 1](https://github.com/lucastrap/S5-SAE-TOAC-grp2/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+1%22)
+
+Phase 2 du projet : [Phase 1](https://github.com/lucastrap/S5-SAE-TOAC-grp2/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+2%22)
 
 
 ## Liens utiles
