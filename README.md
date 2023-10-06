@@ -1,6 +1,6 @@
 # SAE S5 grp2 TOAC
 
-![TOAC Triathlon](S5-SAE-TOAC-grp2/blob/main/Images_Site/index_top.jpg)
+![TOAC Triathlon](/Images_Site/index_top.jpg)
 
 ## L'équipe
 
