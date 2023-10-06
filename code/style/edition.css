@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .main-container{
@@ -24,4 +25,22 @@
     display: flex;
     flex-direction: row;
     gap: 35px;
+}
+
+.article img{
+    width: 300px;
+    max-height: 300px;
+}
+
+#title{
+    font-size: 2em;
+}
+
+footer{
+    margin-top: 200px;
+}
+
+a, a:visited, a:active{
+    color: #000000;
+    text-decoration: none;
 }
