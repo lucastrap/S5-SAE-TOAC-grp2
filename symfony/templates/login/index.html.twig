@@ -5,14 +5,14 @@
     {% endif %}
 
     <div class="flex h-screen bg-white">
-        <div class="w-full max-w-xs m-auto bg-neutral-50 rounded p-5">   
+        <div class="sm:w-1/4 w-full sm:max-w-xs m-auto bg-neutral-100 rounded-lg shadow-xl p-5">   
         <form action="{{ path('app_login') }}" method="post">
             <div>
-                <label class="text-blue-500" for="username">Nom d'utilisateur</label>
+                <label class="-mb-2" for="username">Nom d'utilisateur</label>
                 <input class="w-full" type="text" id="username" name="_username" value="{{ last_username }}">
             </div>
             <div>
-                <label class="text-blue-500" for="password">Password</label>
+                <label class="-mb-2" for="password">Password</label>
                 <input class="w-full"  type="password" id="password" name="_password">
             </div>
             <div>          
