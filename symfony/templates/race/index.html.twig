@@ -8,7 +8,7 @@
             </div>
             <div class="section-content">
                 {% for race in triathlon %}
-                <a href="#" class="border border-lime-400 space-y-2 rounded-3xl text-center px-10 py-3 hover:bg-gray-800">
+                <a href="#" class="w-max-1/3 p-7 text-center w-full border border-lime-500 rounded-3xl m-2.5">
                     <h1 class="uppercase">{{ race.titre }}</h1>
                     <h2 class="uppercase">{{ race.format }}</h2>
                     <p class="text-gray-200">{{ race.challenge ? race.challenge : '.' }}</p>
@@ -16,7 +16,7 @@
                 </a>
 
                 {% endfor %}
-                <div class="section-element">
+                <div class="section-element mx-3">
                     <h1>INDIVIDUEL</h1>
                     <h2>FORMAT S</h2>
                     <p style="color:lightgray">Challenge écoles</p>
