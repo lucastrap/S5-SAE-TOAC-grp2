@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Course;
 use App\Entity\Evenement;
 use App\Entity\Post;
+use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -44,6 +45,7 @@ class DashboardController extends AbstractDashboardController
             MenuItem::section('Organisation'),
             MenuItem::linkToCrud('Évènements', 'fa fa-file-text', Evenement::class),
             MenuItem::linkToCrud('Courses', 'fa fa-file-text', Course::class),
+            MenuItem::linkToCrud('Users', 'fa fa-file-text', User::class),
         ];
     }
 }
