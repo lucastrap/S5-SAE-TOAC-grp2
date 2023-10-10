@@ -25,6 +25,10 @@ class Course
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $challenge = null;
 
+    #[ORM\ManyToOne(inversedBy: 'courses')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?CourseCategory $courseCategory = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -74,6 +78,18 @@ class Course
     public function setChallenge(?string $challenge): static
     {
         $this->challenge = $challenge;
+
+        return $this;
+    }
+
+    public function getCourseCategory(): ?CourseCategory
+    {
+        return $this->courseCategory;
+    }
+
+    public function setCourseCategory(?CourseCategory $courseCategory): static
+    {
+        $this->courseCategory = $courseCategory;
 
         return $this;
     }
