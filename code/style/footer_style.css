@@ -1,16 +1,3 @@
-footer{
-    padding: 45px 0 70px;
-    background: #0f0f0f;
-    justify-content: center;
-    align-items: center;
-    color: #fff; /* Set the text color to white, adjust as needed */
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-}
-footer .p{
-    color: gray;
-}
-
 .copyright{
     padding: 20px 30px;
 }
