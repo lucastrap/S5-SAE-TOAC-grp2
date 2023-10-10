@@ -21,8 +21,8 @@ final class Version20231009080932 extends AbstractMigration
     {
         // this up() migration is auto-generated, please modify it to your needs
 
-        // admin:sacToacChangeThis
-        $this->addSql("INSERT INTO user (username, roles, password, email) VALUES ('admin', '[\"ROLE_ADMIN\"]', '\$2y\$13\$sUaQUG01FaOjsCuti2xZ9.3ZIL28PErpJ0OxrX6tzaX.f1oLGIkGK', 'admin@toac-triathlon.com')");
+        // admin:TOAC*MUST_CHANGE!
+        $this->addSql("INSERT INTO user (username, roles, password, email) VALUES ('admin', '[\"ROLE_ADMIN\"]', '\$2y\$13\$k0jLr6CY7ecDY.bhrX9qJuwBbuPum9533LpcHGr99TwhycGr3MFXi', 'admin@toac-triathlon.com')");
 
     }
 

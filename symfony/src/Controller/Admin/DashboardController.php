@@ -39,13 +39,15 @@ class DashboardController extends AbstractDashboardController
 
             MenuItem::linkToRoute("Accueil", "fa fa-home", "app_index"),
 
+            MenuItem::section('Général'),
+            MenuItem::linkToCrud('Users', 'fa fa-users', User::class),
+
             MenuItem::section('Blog'),
             MenuItem::linkToCrud('Articles', 'fa fa-file-text', Post::class),
 
             MenuItem::section('Organisation'),
             MenuItem::linkToCrud('Évènements', 'fa fa-calendar-days', Evenement::class),
-            MenuItem::linkToCrud('Courses', 'fa fa-running', Course::class),
-            MenuItem::linkToCrud('Users', 'fa fa-users', User::class),
+            MenuItem::linkToCrud('Courses', 'fa fa-running', Course::class),            
 
             MenuItem::section(),
             MenuItem::linkToLogout('Logout', 'fa fa-sign-out-alt'),
