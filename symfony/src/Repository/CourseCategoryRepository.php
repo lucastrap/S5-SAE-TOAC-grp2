@@ -21,6 +21,21 @@ class CourseCategoryRepository extends ServiceEntityRepository
         parent::__construct($registry, CourseCategory::class);
     }
 
+    public function getCategories()
+    {
+        $categories = $this->createQueryBuilder('c')
+            ->select('c.name')
+            ->getQuery()
+            ->getResult();
+
+        $categoriesArray = [];
+        foreach ($categories as $category) {
+            $categoriesArray[$category['name']] = $category['name'];
+        }
+
+        return $categoriesArray;
+    }
+
 //    /**
 //     * @return CourseCategory[] Returns an array of CourseCategory objects
 //     */

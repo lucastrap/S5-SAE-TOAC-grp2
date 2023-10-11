@@ -22,6 +22,7 @@ final class Version20231009080932 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
 
         // admin:TOAC*MUST_CHANGE!
+        $this->addSql("TRUNCATE TABLE user");
         $this->addSql("INSERT INTO user (username, roles, password, email) VALUES ('admin', '[\"ROLE_ADMIN\"]', '\$2y\$13\$k0jLr6CY7ecDY.bhrX9qJuwBbuPum9533LpcHGr99TwhycGr3MFXi', 'admin@toac-triathlon.com')");
 
     }
