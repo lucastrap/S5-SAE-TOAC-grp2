@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Course;
+use App\Entity\CourseCategory;
 use App\Entity\Evenement;
 use App\Entity\Post;
 use App\Entity\User;
@@ -48,6 +49,7 @@ class DashboardController extends AbstractDashboardController
             MenuItem::section('Organisation'),
             MenuItem::linkToCrud('Évènements', 'fa fa-calendar-days', Evenement::class),
             MenuItem::linkToCrud('Courses', 'fa fa-running', Course::class),            
+            MenuItem::linkToCrud('Catégories de Courses', 'fa fa-list', CourseCategory::class),
 
             MenuItem::section(),
             MenuItem::linkToLogout('Logout', 'fa fa-sign-out-alt'),
