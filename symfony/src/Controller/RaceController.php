@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Course;
+use App\Entity\CourseCategory;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,10 +14,17 @@ class RaceController extends AbstractController
     #[Route('/race', name: 'race')]
     public function index(EntityManagerInterface $em): Response
     {
-        $triathlon = $em->getRepository(Course::class)->findAll();
+        $categories = $em->getRepository(CourseCategory::class)->findAll();
+
         return $this->render('race/index.html.twig', [
             'controller_name' => 'RaceController',
-            'triathlon' => $triathlon
+            'categories' => $categories
         ]);
+    }
+
+    #[Route('/race/{id}', name: 'app_race_show')]
+    public function show(Course $course) : Response
+    {
+        return new Response($course->getId(), 200);
     }
 }
