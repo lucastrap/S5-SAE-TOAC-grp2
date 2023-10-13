@@ -36,23 +36,20 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         return [
-            // MenuItem::linkToDashboard('Dashboard', 'fa fa-home'),
+            MenuItem::section("Général"),
+            MenuItem::linkToCrud("Users", "fa fa-users", User::class),
 
-            MenuItem::linkToRoute("Accueil", "fa fa-home", "app_index"),
+            MenuItem::section("Blog"),
+            MenuItem::linkToCrud("Articles", "fa fa-file-text", Post::class),
 
-            MenuItem::section('Général'),
-            MenuItem::linkToCrud('Users', 'fa fa-users', User::class),
+            MenuItem::section("Organisation"),
+            MenuItem::linkToCrud("Évènements", "fa fa-calendar-days", Evenement::class),
+            MenuItem::linkToCrud("Courses", "fa fa-running", Course::class),            
+            MenuItem::linkToCrud("Catégories de Courses", "fa fa-list", CourseCategory::class),
 
-            MenuItem::section('Blog'),
-            MenuItem::linkToCrud('Articles', 'fa fa-file-text', Post::class),
-
-            MenuItem::section('Organisation'),
-            MenuItem::linkToCrud('Évènements', 'fa fa-calendar-days', Evenement::class),
-            MenuItem::linkToCrud('Courses', 'fa fa-running', Course::class),            
-            MenuItem::linkToCrud('Catégories de Courses', 'fa fa-list', CourseCategory::class),
-
-            MenuItem::section(),
-            MenuItem::linkToLogout('Logout', 'fa fa-sign-out-alt'),
+            MenuItem::section("Autre"),
+            MenuItem::linkToRoute("Retour au site", "fa fa-home", "app_index"),
+            MenuItem::linkToLogout("Logout", "fa fa-sign-out-alt"),
         ];
     }
 }
