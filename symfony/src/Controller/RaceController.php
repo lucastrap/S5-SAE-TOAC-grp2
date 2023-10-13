@@ -25,6 +25,8 @@ class RaceController extends AbstractController
     #[Route('/race/{id}', name: 'app_race_show')]
     public function show(Course $course) : Response
     {
-        return new Response($course->getId(), 200);
+        return $this->render('race/show.html.twig', [
+            'race' => $course
+        ]);
     }
 }
