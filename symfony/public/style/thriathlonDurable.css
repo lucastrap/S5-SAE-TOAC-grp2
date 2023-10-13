@@ -1,8 +1,25 @@
 body {
-    margin: 0;
     font-size: 16px;
+    background-color: white;
     /* Utilisez des unités relatives pour la taille de police */
 }
+
+/*h1 {*/
+/*    font-size: 20px;*/
+/*    margin-left: 1rem;*/
+/*}*/
+
+.textContent {
+    margin-left: 3rem;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+ul {
+    text-align: left;
+    margin-left: 3rem;
+}
+
 
 .menu-item {
     cursor: pointer;
@@ -14,7 +31,6 @@ body {
 .menu-item:hover {
     background-color: #e70404;
     /* Couleur de fond au survol */
-
 }
 
 /* Styles pour le surlignage du texte au survol */
@@ -38,8 +54,6 @@ body {
     z-index: 1;
     /* Assurez-vous que le sous-menu est au-dessus du reste du contenu */
 }
-
-
 
 /* Styles pour les éléments du sous-menu */
 .sous-menu-item {
@@ -86,7 +100,8 @@ body {
 body {}
 
 .container {
-    color: rgb(68, 68, 68);
+    /*color: rgb(68, 68, 68);*/
+    color: #0f0f0f;
     font-family: Arial, sans-serif;
     text-align: left;
     /* Le texte sera centré horizontalement */
@@ -105,18 +120,14 @@ h2 {
     font-size: 24px;
 }
 
-p {
-    font-size: 14px;
-    text-align: left;
-    /* Le texte du paragraphe reste aligné à gauche */
-    margin-left: 20px;
-    margin-right: 20px;
-}
+/*p {*/
+/*    font-size: 14px;*/
+/*    text-align: left;*/
+/*    !* Le texte du paragraphe reste aligné à gauche *!*/
+/*    margin-left: 20px;*/
+/*    margin-right: 20px;*/
+/*}*/
 
-ul {
-    text-align: left;
-    margin-left: 40px;
-}
 
 a {
     text-decoration: none;
