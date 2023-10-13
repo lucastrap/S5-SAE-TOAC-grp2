@@ -14,7 +14,7 @@
 - [Olivier Recher](https://github.com/OlivierRecher)
 - [Thomas Masin](https://github.com/caerroff)
 - [Hugo Monté](https://github.com/hugomonte)
-- [Mohammed Kerrouche](https://github.com/Fiujy)
+- [Mohamed Kerrouche](https://github.com/Fiujy)
 
 ## Project Context
 
