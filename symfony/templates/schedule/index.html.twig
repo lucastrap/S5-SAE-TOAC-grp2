@@ -1,14 +1,44 @@
 {% extends 'layouts/default/base.html.twig' %}
 {% block body %}
-    <link rel="stylesheet" href="{{ asset('style/schedule.css') }}">
-    <link rel="stylesheet" href="{{ asset('style/header.css') }}">
+    {# <link rel="stylesheet" href="{{ asset('style/schedule.css') }}"> #}
     <link rel="stylesheet" href="{{ asset('style/footer_style.css') }}">
 
+<style>
+
+.background {
+    background-image: url('../assets/epreuves_programme.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ajustez la hauteur de l'arrière-plan pour couvrir l'écran entier */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 8%;
+    align-items: center;
+   
+}
+
+.square {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 35%;
+    width: 120%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s; /* Ajoute une transition pour la transformation */
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+</style>
 
     <div class="background">
-        <div class="square hidden"></div>
+        <div class="square invisible"></div>
         <div class="square">Carré 1</div>
         <div class="square">Carré 2</div>
-        <div class="square hidden"></div>
+        <div class="square invisible"></div>
     </div>
 {% endblock %}

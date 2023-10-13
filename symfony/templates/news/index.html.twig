@@ -1,9 +1,154 @@
 {% extends 'layouts/default/base.html.twig' %}
 
 {% block body %}
-    <link rel="stylesheet" href="{{ asset('style/news.css') }}">
-    <link rel="stylesheet" href="{{ asset('style/header.css') }}">
+    {# <link rel="stylesheet" href="{{ asset('style/news.css') }}"> #}
     <link rel="stylesheet" href="{{ asset('style/footer_style.css') }}">
+    <style>
+    .container{
+        color: rgb(68, 68, 68);
+        font-family: Arial, sans-serif;
+        text-align: left; /* Le texte sera centré horizontalement */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    h1 {
+        font-size: 33px;
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3{
+        font-size: 16px;
+        font-weight: bolder;
+        margin-top: 8%;
+  
+    }
+    p {
+        font-size: 14px;
+        text-align: left; /* Le texte du paragraphe reste aligné à gauche */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    h4{
+
+    }
+
+.container2 {
+margin-top: 10%;
+display: flex; /* Utilisez un conteneur flexible pour centrer les images */
+justify-content: center; /* Centrez horizontalement les éléments enfants */
+align-items: center; /* Centrez verticalement les éléments enfants */
+gap: 10%;
+margin-bottom: 2%;
+}
+
+.container2_2 img{
+width: 100%; /* Définissez la largeur à 100% pour que les images soient de la même taille */
+max-width: 80%; /* Vous pouvez définir une largeur maximale si nécessaire */
+height: auto; /* Permettez à la hauteur de s'ajuster automatiquement pour maintenir les proportions */
+margin-left: 5%;
+}
+.container2_3 img {
+width: 7%;
+max-width: 80%;
+height: auto;
+margin-left: 5px; /* Ajoutez cette ligne pour réduire la marge gauche entre les images */
+}
+
+#precedent {
+left: 0;
+}
+
+#suivant {
+right: 0;
+}
+
+#slider:hover #precedent,
+#slider:hover #suivant {
+opacity: 1;
+}
+.image-container {
+display: flex;
+justify-content: center;
+grid-column: auto auto;
+}
+.centered-logos {
+
+gap:10%;
+display: flex;
+justify-content: center; /* Centrer horizontalement */
+align-items: center; /* Centrer verticalement */
+height: 100%; /* Assurez-vous que la div parente prend toute la hauteur disponible */
+}
+.page{
+min-height: 100vh;
+padding-top: 5%;
+font-size: 16px;
+background-image: url("../assets/marek.jpg"); /* Couleur grise, vous pouvez ajuster la couleur en fonction de vos préférences */
+color: white;
+background-size: cover; /* Pour redimensionner automatiquement l'image pour remplir l'arrière-plan */
+background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
+background-attachment: fixed; /* Pour que l'image reste fixe lorsque vous faites défiler la page */
+
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5%;
+    font-size: 30px;
+}
+
+/* Styles pour la grille de 3 colonnes */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5%;
+    margin: 15px auto;
+    max-width: 55%; /* Ajustez la largeur selon vos besoins */
+    min-width: 80vh;
+}
+.grid-item:hover img {
+    transform: scale(1.02); /* Redimensionnez légèrement l'image */
+    transition: transform 0.3s ease; /* Ajoutez une transition fluide */
+    
+}
+/* Styles pour chaque carré dans la grille */
+.grid-item {
+    text-align: center;
+    border-radius: 2%;
+
+}
+
+/* Styles pour les images dans chaque carré */
+.grid-item img {
+    width: 100%;
+    height: 80%;    object-fit: cover; /* L'image dépassera du conteneur tout en maintenant ses proportions */
+    border-radius: 2%;
+   
+}
+
+/* Styles pour le texte sous chaque image */
+.grid-item p {
+    margin-top: 20%;
+    font-size: 16px;
+}
+.test-button {
+background-color: pink; /* Couleur rose */
+color: white; /* Couleur du texte en blanc */
+padding: 10px 20px; /* Espacement intérieur du bouton */
+border: none; /* Supprimez la bordure */
+cursor: pointer;
+transition: background-color 0.4s; /* Animation de transition de la couleur de fond */
+}
+.test-button:hover {
+background-color: #ff69b4; /* Nouvelle couleur de fond au survol */
+/* Ajoutez ici votre animation JavaScript */
+}
+</style>
 
  <div class="page">
     <div class="title">Les Dernières News</div>
@@ -12,7 +157,8 @@
     <div class="grid">
         <!-- Carré 1 -->
         <div class="grid-item">
-            <img src="/Images_Site/actus_1.jpg" alt="Image 1">
+            <img src="{{  asset('assets/actus_1.jpg') }}"  alt="Image 1">
+
             <div class="item-text">
                 <a href="">Edition 2023</a></br>
                 <strong>Guide Athlète 2023 !</strong>
@@ -22,7 +168,8 @@
     
         <!-- Carré 2 -->
         <div class="grid-item">
-            <img src="/Images_Site/actus_2.jpg" alt="Image 2">
+            <img src="{{  asset('assets/actus_2.jpg') }}"  alt="Image 2">
+
             <div class="item-text">
                 <a href="">Edition 2023</a></br>
                 <h3d>Si le Half du Lauragais était...</h3>
@@ -31,7 +178,7 @@
     
         <!-- Carré 3 -->
         <div class="grid-item">
-            <img src="/Images_Site/Index.jpg" alt="Image 3">
+            <img src="{{  asset('assets/Index.jpg') }}"  alt="Image 3">
             <div class="item-text">
                 <a href="">Edition 2023</a></br>
                 <h3>Les inscriptions sont ouvertes !</h3>

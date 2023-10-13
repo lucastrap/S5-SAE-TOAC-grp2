@@ -1,9 +1,99 @@
 {% extends 'layouts/default/base.html.twig' %}
 
 {% block body %}
-    <link rel="stylesheet" href="./style/CanalMidi.css">
-    <link rel="stylesheet" href="./style/header.css">
+    {# <link rel="stylesheet" href="./style/CanalMidi.css"> #}
     <link rel="stylesheet" href="../code/style/footer_style.css">
+    <style>
+    
+    .container{
+        color: rgb(68, 68, 68);
+        font-family: Arial, sans-serif;
+        text-align: left; /* Le texte sera centré horizontalement */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    h1 {
+        font-size: 33px;
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 14px;
+        text-align: left; /* Le texte du paragraphe reste aligné à gauche */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+  
+    #slider {
+        user-select: none;
+        position: relative;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10%;
+        height: 400px; /* Hauteur de la div */
+        overflow: hidden; /* Pour s'assurer que l'image ne dépasse pas la div */
+    }
+
+#precedent,
+#suivant {
+cursor: pointer;
+transition: opacity 0.4s ease;
+opacity: 0;
+position: absolute;
+font-size: 50px;
+
+color: rgba(220, 220, 220, 0.8);
+background-color: rgba(45, 44, 44, 0.8);
+padding: 10px;
+}
+.fade {
+animation-name: fade;
+animation-duration: 1s;
+}
+
+@keyframes fade {
+from {
+    opacity: 0.4;
+}
+to {
+    opacity: 1;
+}
+}
+
+.container2 {
+margin-top: 10%;
+display: flex; /* Utilisez un conteneur flexible pour centrer les images */
+justify-content: center; /* Centrez horizontalement les éléments enfants */
+align-items: center; /* Centrez verticalement les éléments enfants */
+gap: 10%;
+margin-bottom: 2%;
+}
+
+.container2 img {
+width: 100%; /* Définissez la largeur à 100% pour que les images soient de la même taille */
+max-width: 300px; /* Vous pouvez définir une largeur maximale si nécessaire */
+height: auto; /* Permettez à la hauteur de s'ajuster automatiquement pour maintenir les proportions */
+}
+
+#precedent {
+left: 0;
+}
+
+#suivant {
+right: 0;
+}
+
+#slider:hover #precedent,
+#slider:hover #suivant {
+opacity: 1;
+}
+
+    </style>
 
     <div class="container">
         <div class="square"><h2>Notre collaboration avec Voies Navigables de France (VNF)</h2>
@@ -31,7 +121,7 @@
                 A ce jour, 30 100 platanes ont été abattus, 16 700 arbres replantés, 57km de berges restaurées et 1350
                 nichoirs installés.</br>
                 Pour aller plus loin n’hésitez pas à consulter le site internet VNF :<a
-                        href="https://www.replantonslecanaldumidi.fr/" target="_blank">“Replantons le canal du Midi”</a>
+                        href="https://www.replantonslecanaldumidi.fr/" target="_blank" text-[#007BFF]>“Replantons le canal du Midi”</a>
 
             </p>
             <div id="slider">

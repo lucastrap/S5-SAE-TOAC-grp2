@@ -1,9 +1,39 @@
 {% extends 'layouts/default/base.html.twig' %}
 
 {% block body %}
-    <link rel="stylesheet" href="{{ asset('style/thriathlonDurable.css') }}">
-    <link rel="stylesheet" href="{{ asset('style/header.css') }}">
+    {# <link rel="stylesheet" href="{{ asset('style/thriathlonDurable.css') }}"> #}
     <link rel="stylesheet" href="{{ asset('style/footer_style.css') }}">
+
+    <style>
+    
+.container {
+    color: rgb(68, 68, 68);
+    font-family: Arial, sans-serif;
+    text-align: left;
+    /* Le texte sera centré horizontalement */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 33px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 14px;
+    text-align: left;
+    /* Le texte du paragraphe reste aligné à gauche */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+    </style>
 
     <div class="font-serif container ml-2 relative isolate overflow-hidden bg-white px-20 lg:overflow-visible">
         <h1 class="pb-2">Triathlon Durable</h1>
@@ -64,7 +94,7 @@
 
             <p>
                 <ul class="list-disc">
-                    <li>Soutien du programme : <a href="https://www.replantonslecanaldumidi.fr/" target="_blank">“Replantons le
+                    <li>Soutien du programme : <a href="https://www.replantonslecanaldumidi.fr/" target="_blank" class="no-underline text-[#007BFF]">“Replantons le
                             canal du Midi”</a> en proposant aux participants du Half du Lauragais de reverser 1€ à une cause
                         environnementale au moment de l’inscription </li>
                     <li>Fin des plastiques à usage unique et arrêt de leur distribution pour les participants (bouteilles,
