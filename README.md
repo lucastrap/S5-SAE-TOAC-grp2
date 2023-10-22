@@ -26,6 +26,31 @@ composer install
 npm i
 ```
 
+Then you can setup the database.
+In the symfony directory, create a .env.local file, and write your database configuration, like so:
+```
+DATABASE_URL="mysql://root:password@127.0.0.1:3300/sae_toac?charset=utf8mb4"
+```
+
+You can then start the docker, in the docker folder
+```
+docker compose up -d
+```
+The database is accessible on the port 3300
+
+Once done, go back to the Symfony folder and run the following:
+```
+php bin/console doctrine:database:create
+php bin/console doctrine:migrations:migrate
+```
+
+That's it, the setup is complete !
+You can launch the project with the following, from the symfony folder:
+```
+php -S localhost:3000 -t public
+npm run watch
+```
+
 ## Project Context
 
 This GitHub repository has been created for the [SAE5.A.01](https://webetud.iut-blagnac.fr/course/view.php?id=1131) project.
