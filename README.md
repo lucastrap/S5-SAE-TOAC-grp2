@@ -51,6 +51,34 @@ php -S localhost:3000 -t public
 npm run watch
 ```
 
+## Deployement
+
+The server requirements are the following :
+```
+php php-intl php-mysql npm
+```
+
+If using Apache :
+```
+apache2 php-fpm libapache2-mod-fcgid
+```
+
+If using MariaDB on the server :
+```
+mariadb
+```
+
+Otherwise with docker:
+```
+docker
+```
+
+Once PHP has been enable with *a2enmod*, you can deploy the application
+You can follow the symfony deployement manual [here](https://symfony.com/doc/current/setup/web_server_configuration.html)
+
+Once done, you'll have to install a mariadb or mysql database on the server, and change the .env accordingly (with the user:password and the correct url and port)
+
+
 ## Project Context
 
 This GitHub repository has been created for the [SAE5.A.01](https://webetud.iut-blagnac.fr/course/view.php?id=1131) project.
