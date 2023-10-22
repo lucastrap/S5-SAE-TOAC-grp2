@@ -16,6 +16,16 @@
 - [Hugo Monté](https://github.com/hugomonte)
 - [Mohamed Kerrouche](https://github.com/Fiujy)
 
+## Installation
+
+Once the project has been cloned, you have to install the dependencies (not commited in the github)
+
+In the symfony directory:
+```
+composer install
+npm i
+```
+
 ## Project Context
 
 This GitHub repository has been created for the [SAE5.A.01](https://webetud.iut-blagnac.fr/course/view.php?id=1131) project.
