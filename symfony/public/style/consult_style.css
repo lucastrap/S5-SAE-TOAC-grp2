@@ -1,0 +1,219 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #fefefe;
+    font-family: 'Oswald', sans-serif;
+}
+
+.main-container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100vh - 100px);
+}
+
+.section{   
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+#race-sumup{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 100px);
+}
+
+#race-sumup::before{
+    background-image: url("https://half.toac-triathlon.com/wp-content/uploads/2023/03/velo-scaled.jpg");
+    content: '';
+    z-index: 0;
+    background-size: cover;
+    background-position: top center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; 
+    opacity: 45%;
+}
+
+#sumup-img{
+    width: 100%;
+    object-fit: contain;
+    max-height: 350px;
+    z-index: 1;
+}
+
+#race-details{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    height: calc(100vh - 100px);
+    gap:5%;
+}
+
+#race-details::before{
+    background-image: url("https://half.toac-triathlon.com/wp-content/uploads/2023/03/velo-scaled.jpg");
+    content: '';
+    z-index: 0;
+    background-size: cover;
+    background-position: top center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; 
+    opacity: 65%;
+}
+
+#race-details > *{
+    z-index: 1;
+}
+
+#blocks{
+    display: flex;  
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    gap:7%;
+}
+
+#block-infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+    width: 20%;
+    height: 100%;
+    gap: 5%;
+}
+
+#block-horaires{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+    width: 40%;
+    height: 100%;
+    gap: 5%;
+}
+
+#block-tarifs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 20%;
+    height: 100%;
+    gap: 5%;
+}
+
+#buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+#buttons > a{
+    color: white;
+    border-radius: 25px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #f02484;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#buttons > a:hover{
+    opacity: 70%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#map-details{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 100px);
+    gap:5%;
+}
+
+#map-details::before{
+    background-image: url("https://half.toac-triathlon.com/wp-content/uploads/2023/03/velo-scaled.jpg");
+    content: '';
+    z-index: 0;
+    background-size: cover;
+    background-position: top center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; 
+    opacity: 75%;
+}
+
+#map-details > *{
+    z-index: 1;
+}
+
+#maps{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    gap:7%;
+}
+
+#maps > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    gap: 5%;
+}
+
+#texte{
+    color: black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: calc(100vh - 100px);
+    width: 65%;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+}
+
+#texte > *{
+    text-wrap: wrap;
+}
+
+#prix-course{
+    color: #90c43c;
+    font-size: 3em;
+}
