@@ -20,6 +20,13 @@
 
 Once the project has been cloned, you have to install the dependencies (not commited in the github)
 
+Install the dependecies (linux) : 
+```
+apt update
+apt install composer
+apt install npm
+```
+
 In the symfony directory:
 ```
 composer install
