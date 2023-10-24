@@ -25,6 +25,8 @@ Install the dependecies (linux) :
 apt update
 apt install composer
 apt install npm
+apt install docker.io
+apt install php
 ```
 
 In the symfony directory:
