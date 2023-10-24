@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triathlon de Nailloux | Half du Lauragais</title>
+    {{ encore_entry_link_tags('app') }}
+
+    <link rel="stylesheet" href="{{ asset('style/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            color: black;
+            font-family: 'roboto', sans-serif;
+        }
+    </style>
+</head>
+<body>    
+    {% block body %}{% endblock %}
+</body>
+<script src="{{ asset('js/parallax.js') }}" defer></script>
+</html>

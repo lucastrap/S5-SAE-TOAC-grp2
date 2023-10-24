@@ -1,5 +1,6 @@
 .bandeau-blanc {
     display: flex;
+    flex-direction: row;
     align-items: stretch;
     color: #181C44;
     z-index: 10;
@@ -9,16 +10,16 @@
 }
 
 .bandeau_gauche {
-    background-image: url('../../Images_Site/index_top.jpg');
-    background-size: 35%;
-    background-position: left;
     margin-left: 2%;
     background-repeat: no-repeat;
     color: white;
-    padding: 2%;
-    text-align: center;
+    padding: 10px;
     width: 100%; /* Pour occuper la largeur complète sur les petits écrans */
     box-sizing: border-box; /* Gardez la largeur totale incluse dans la boîte */
+}
+
+.bandeau_gauche img{
+    height: 100%;
 }
 
 .bandeau-droite {
@@ -83,12 +84,18 @@ z-index: 10; /* Assurez-vous que le sous-menu est au-dessus du reste du contenu 
 }
 
 .sous-menu-item:hover{
-    background-color: #cccccc; /* Couleur de fond au survol */
+    background-color: #DF2785; /* Couleur de fond au survol */
+    color: #ffffff;
 }
 
 .menu-item:hover .sous-menu {
 opacity: 1; /* Afficher le sous-menu en réglant l'opacité à 1 */
 transform: scale(1); /* Rétablir la taille normale du sous-menu */
+}
+
+.sous-menu a, .sous-menu a:visited, .sous-menu a:active{
+    color: #DF2785;
+    text-decoration: none;
 }
 
 .svg{
