@@ -49,6 +49,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     height: wrap-content;
     width: 100%;
     border-radius: 25px;
@@ -118,6 +119,17 @@ body{
 
 #swimrun .section-element {
     border-color: #3c5cfc;
+}
+
+.details{
+    text-decoration: none;
+    color: #fefefe;
+}
+
+.details:hover{
+    span{
+        content: "O";
+    }
 }
 
 /*
