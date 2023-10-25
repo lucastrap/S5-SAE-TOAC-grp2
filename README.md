@@ -16,6 +16,8 @@
 - [Hugo Monté](https://github.com/hugomonte)
 - [Mohamed Kerrouche](https://github.com/Fiujy)
 
+
+
 ## Installation
 
 Once the project has been cloned, you have to install the dependencies (not commited in the github)
