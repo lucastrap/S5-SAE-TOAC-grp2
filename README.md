@@ -108,7 +108,7 @@ Our mission is to improve the TOAC Triathlon club website by implementing additi
 
 ### Current Project Progress:
 
-[██████████████████████████████████████████░░░░░] 86%
+[██████████████████████████████████████████░░░░░] 87%
 
 ### Here is a slideshow presenting the client and their needs: [TOAC Slideshow](https://docs.google.com/presentation/d/19AGVjNUYI3qM5f7slZo5BkiuPfHRaJR4KTdoPo22Uow/edit#slide=id.g27b0f7cac84_1_155)
 
