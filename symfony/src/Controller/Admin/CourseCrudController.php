@@ -13,7 +13,11 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
+use Doctrine\ORM\Mapping as ORM;
+
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+
 
 class CourseCrudController extends AbstractCrudController
 {
@@ -32,12 +36,27 @@ class CourseCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
+            TextField::new('image', 'Image'),
             TextField::new('titre', 'Titre'),
             TextField::new('format', 'Format'),
             NumberField::new('prix', 'Prix'),
             TextField::new('challenge', 'Challenge'),
 //            EntityCollection::new([CourseCategory::class])
-            AssociationField::new('courseCategory', 'Catégorie')
-        ];
+            AssociationField::new('courseCategory', 'Catégorie'),
+            TextField::new('specificites', 'Specificites'),
+            TextField::new('catAge', 'Categories d\'âges'),
+            DateTimeField::new('clotInscr', 'Clôture des inscriptions'),
+            TextField::new('jour', 'Jour de la course'),
+            TextField::new('horaires', 'Details sur les horaires'),
+            TextField::new('horaires2', 'Départs des courses'),
+            NumberField::new('individuel', 'Prix individuel de la course'),
+            TextField::new('detailNonL', 'Détails pour les non licenciés'),
+            NumberField::new('relais', 'Prix relais de la course'),
+            TextField::new('detailNonLR', 'Détails pour les non licenciés'),
+            NumberField::new('duo', 'Prix duo de la course'),
+            TextField::new('detailNonLD', 'Détails pour les non licenciés'),
+           
+            //Faire en sorte de choisir 3 catégories ou 2
+          ];
     }
 }

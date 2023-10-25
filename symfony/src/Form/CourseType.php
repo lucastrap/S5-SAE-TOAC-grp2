@@ -16,6 +16,19 @@ class CourseType extends AbstractType
             ->add('format')
             ->add('prix')
             ->add('challenge')
+            ->add('specificites')
+            ->add('catAge')
+            ->add('clotInscr')
+            ->add('jour')
+            ->add('horaires')
+            ->add('horaires2')
+            ->add('individuel')
+            ->add('detailNonL')
+            ->add('relais')
+            ->add('detailNonLR')
+            ->add('duo')
+            ->add('detailNonLD')
+
         ;
     }
 
