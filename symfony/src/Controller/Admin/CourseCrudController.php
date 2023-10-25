@@ -45,10 +45,8 @@ class CourseCrudController extends AbstractCrudController
             TextField::new('format', 'Format'),
             NumberField::new('prix', 'Prix'),
             TextField::new('challenge', 'Challenge'),
-//            EntityCollection::new([CourseCategory::class])
             AssociationField::new('courseCategory', 'Catégorie'),
             
-         
         FormField::addTab('Info')->setIcon('fa fa-info-circle'),
             TextField::new('specificites', 'Specificites'),
             TextField::new('catAge', 'Categories d\'âges'),
@@ -72,11 +70,9 @@ class CourseCrudController extends AbstractCrudController
             TextField::new('mapRace2', 'Autre lien de trajet')->setRequired(false),
             TextField::new('mapRace3', 'Autre lien de trajet')->setRequired(false),
             
-
-            FormField::addTab('Assurance')->setIcon('fa fa-shield'),
+        FormField::addTab('Assurance')->setIcon('fa fa-shield'),
             NumberField::new('prixAss', 'Prix de l\'assurance'),
-            //Faire en sorte de choisir 3 catégories ou 2
-          ];
+      ];
     }
    
 }

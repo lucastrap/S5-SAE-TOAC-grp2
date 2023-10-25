@@ -61,7 +61,7 @@ body{
 
 .section-element::before{
     content: '';
-    background-image: url('{{ race.image }}');
+    background-image: url('{{ race.image }}');/** MUST CHANGE*/
     background-size: cover;
     background-position: top center;
     border-radius: 25px;
