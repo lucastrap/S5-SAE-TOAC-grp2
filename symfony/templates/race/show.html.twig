@@ -2,6 +2,11 @@
 
 {% block body %}
     <link rel="stylesheet" href="{{ asset('style/consult_style.css') }}">
+    <style>
+        section::before{
+            background-image: url("{{race.image}}");
+        }
+    </style>
     <div class="main-container">
         <section class="section" id="race-sumup">
             <img id="sumup-img" src="https://half.toac-triathlon.com/wp-content/uploads/2023/03/DistancesS.png" alt="a">
@@ -39,7 +44,7 @@
         </section>
         <section class="section" id="texte">
             <h2>Assurance "remboursement 100%"</h2>
-            <p id="prix-course">8€</p>
+            <p id="prix-course">{{race.prixAss}}€</p>
             <h3>Conditions d’éligibilité au remboursement</h3>
             <!-- numbered list with 3 elements-->
             <ol>
