@@ -108,7 +108,7 @@ Our mission is to improve the TOAC Triathlon club website by implementing additi
 
 ### Current Project Progress:
 
-[████████████████████████████████░░░░░░░░░░░░░░░] 73%
+[██████████████████████████████████████████░░░░░] 86%
 
 ### Here is a slideshow presenting the client and their needs: [TOAC Slideshow](https://docs.google.com/presentation/d/19AGVjNUYI3qM5f7slZo5BkiuPfHRaJR4KTdoPo22Uow/edit#slide=id.g27b0f7cac84_1_155)
 
@@ -131,7 +131,8 @@ Project Phase 1: [Phase 1](https://github.com/lucastrap/S5-SAE-TOAC-grp2/issues?
 
 Project Phase 2: [Phase 2](https://github.com/lucastrap/S5-SAE-TOAC-grp2/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+2%22)
 
-Project Phase 3: To be defined
+Project Phase 3: [Phase 3](https://github.com/lucastrap/S5-SAE-TOAC-grp2/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+3%22)
+
 
 ## Useful Links
 
