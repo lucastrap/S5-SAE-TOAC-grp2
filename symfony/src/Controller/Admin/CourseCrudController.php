@@ -39,7 +39,7 @@ class CourseCrudController extends AbstractCrudController
     {
         return [
             
-        FormField::addTab('Course')->setIcon('fa fa-male'),
+        FormField::addTab('Course')->setIcon('fa fa-running'),
             TextField::new('image', 'Lien de l\'image'),
             TextField::new('titre', 'Titre'),
             TextField::new('format', 'Format'),

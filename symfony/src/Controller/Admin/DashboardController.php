@@ -7,6 +7,7 @@ use App\Entity\CourseCategory;
 use App\Entity\Evenement;
 use App\Entity\Post;
 use App\Entity\User;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -42,6 +43,10 @@ class DashboardController extends AbstractDashboardController
             MenuItem::section("Blog"),
             MenuItem::linkToCrud("Articles", "fa fa-file-text", Post::class),
             */
+            MenuItem::section("Analyse"),
+            MenuItem::linkToUrl('Google Analytics', 'fa fa-info', 'https://www.google.com/analytics', [
+                'target' => '_blank',
+            ]),
             MenuItem::section("Organisation"),
             MenuItem::linkToCrud("Évènements", "fa fa-calendar-days", Evenement::class),
             MenuItem::linkToCrud("Courses", "fa fa-running", Course::class),            
