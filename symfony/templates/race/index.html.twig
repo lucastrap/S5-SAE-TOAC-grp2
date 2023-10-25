@@ -20,7 +20,7 @@
                             <h2>{{ race.format }}</h2>
                             <p style="color:lightgray">{{ race.challenge }}</p>
                             <h3 class="price text-lime-500">{{ race.prix }}€</h3>
-                            {% set backgroundImage = race.image %}
+                            {% set backgroundImage = race.image %}<!-- Faire en  sorte de récuperer l'image du textField du dashboard -->
                         </a>
                     {% endfor %}
                 </div>
