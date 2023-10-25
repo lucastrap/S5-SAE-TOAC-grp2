@@ -53,23 +53,96 @@ class Course
     #[ORM\Column]
     private ?int $individuel = null;
 
-    #[ORM\Column]
+    #[ORM\Column( nullable: true)]
     private ?int $relais = null;
 
-    #[ORM\Column]
+    #[ORM\Column( nullable: true)]
     private ?int $duo = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $detailNonL = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $detailNonLR = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $detailNonLD = null;
 
+    #[ORM\Column(length: 999)]
+    private ?string $image = null;
+
+    #[ORM\Column]
+    private ?int $prixAss = null;
+
+    #[ORM\Column(length: 999)]
+    private ?string $mapRace = null;
+
+    #[ORM\Column(length: 999, nullable: true)]
+    private ?string $mapRace2 = null;
+
+    #[ORM\Column(length: 999, nullable: true)]
+    private ?string $mapRace3 = null;
+
+    public function getMapRace(): ?string
+    {
+        return $this->mapRace;
+    }
+
+    public function setMapRace(?string $mapRace): static
+    {
+        $this->mapRace = $mapRace;
+
+        return $this;
+    }
+    public function getMapRace2(): ?string
+    {
+        return $this->mapRace2;
+    }
+
+    public function setMapRace2(?string $mapRace2): static
+    {
+        $this->mapRace2 = $mapRace2;
+
+        return $this;
+    }
+
+    public function getMapRace3(): ?string
+    {
+        return $this->mapRace3;
+    }
+
+    public function setMapRace3(?string $mapRace3): static
+    {
+        $this->mapRace3 = $mapRace3;
+
+        return $this;
+    }
 
 
+
+    public function getPrixAss(): ?int
+    {
+        return $this->prixAss;
+    }
+
+    public function setPrixAss(int $prixAss): static
+    {
+        $this->prixAss = $prixAss;
+
+        return $this;
+    }
+
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+    public function setImage(string $image): static
+    {
+        $this->image = $image;
+
+        return $this;
+    }
     public function getId(): ?int
     {
         return $this->id;

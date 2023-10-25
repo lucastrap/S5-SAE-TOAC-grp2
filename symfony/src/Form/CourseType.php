@@ -28,6 +28,11 @@ class CourseType extends AbstractType
             ->add('detailNonLR')
             ->add('duo')
             ->add('detailNonLD')
+            ->add('image')
+            ->add('prixAss')
+            ->add('mapRace')
+            ->add('mapRace2')
+            ->add('mapRace3')
 
         ;
     }

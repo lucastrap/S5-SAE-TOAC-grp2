@@ -38,10 +38,10 @@ class DashboardController extends AbstractDashboardController
         return [
             MenuItem::section("Général"),
             MenuItem::linkToCrud("Users", "fa fa-users", User::class),
-
+            /** 
             MenuItem::section("Blog"),
             MenuItem::linkToCrud("Articles", "fa fa-file-text", Post::class),
-
+            */
             MenuItem::section("Organisation"),
             MenuItem::linkToCrud("Évènements", "fa fa-calendar-days", Evenement::class),
             MenuItem::linkToCrud("Courses", "fa fa-running", Course::class),            
