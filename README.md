@@ -2,6 +2,7 @@
 
 ![TOAC Triathlon](./Images_Site/index_top.jpg)
 
+Latest release of the project : [Latest release](https://github.com/lucastrap/S5-SAE-TOAC-grp2/releases/tag/v2.0)
 ## The Team
 
 ### Initials students
