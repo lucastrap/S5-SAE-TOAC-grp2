@@ -144,17 +144,11 @@
         <section class="section" id="map-details">
             <h1>PARCOURS</h2>
             <div id="maps">
-<<<<<<< Updated upstream
-                <div id="map1">
-                    <iframe src="https://www.google.com/maps/d/embed?mid=1211Oo0OCh1LxZL4XUld8sY4dVItQvok&hl=fr&ehbc=2E312F" width="100%" height="100%"></iframe>
-                </div>
-=======
                 {% if race.mapRace2 != "" %}
                     <div id="map1">
                         <iframe src="{{race.mapRace2}}" width="100%" height="100%"></iframe>
                     </div>
                 {% endif %}
->>>>>>> Stashed changes
                 <div id="map2">
                     <iframe src="{{race.mapRace}}" width="100%" height="100%"></iframe>
                 </div>
