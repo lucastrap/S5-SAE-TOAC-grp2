@@ -2,6 +2,7 @@
 
 ![TOAC Triathlon](./Images_Site/index_top.jpg)
 
+Latest release of the project : [Latest release](https://github.com/lucastrap/S5-SAE-TOAC-grp2/releases/tag/v2.0)
 ## The Team
 
 ### Initials students
@@ -16,9 +17,20 @@
 - [Hugo Monté](https://github.com/hugomonte)
 - [Mohamed Kerrouche](https://github.com/Fiujy)
 
+
+
 ## Installation
 
 Once the project has been cloned, you have to install the dependencies (not commited in the github)
+
+Install the dependecies (linux) : 
+```
+apt update
+apt install composer
+apt install npm
+apt install docker
+apt install php
+```
 
 In the symfony directory:
 ```
@@ -99,7 +111,7 @@ Our mission is to improve the TOAC Triathlon club website by implementing additi
 
 ### Current Project Progress:
 
-[████████████████████████████████░░░░░░░░░░░░░░░] 73%
+[██████████████████████████████████████████░░░░░] 87%
 
 ### Here is a slideshow presenting the client and their needs: [TOAC Slideshow](https://docs.google.com/presentation/d/19AGVjNUYI3qM5f7slZo5BkiuPfHRaJR4KTdoPo22Uow/edit#slide=id.g27b0f7cac84_1_155)
 
@@ -122,7 +134,8 @@ Project Phase 1: [Phase 1](https://github.com/lucastrap/S5-SAE-TOAC-grp2/issues?
 
 Project Phase 2: [Phase 2](https://github.com/lucastrap/S5-SAE-TOAC-grp2/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+2%22)
 
-Project Phase 3: To be defined
+Project Phase 3: [Phase 3](https://github.com/lucastrap/S5-SAE-TOAC-grp2/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Phase+3%22)
+
 
 ## Useful Links
 

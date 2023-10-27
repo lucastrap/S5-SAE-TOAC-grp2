@@ -13,7 +13,13 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\FormColumns;
+use EasyCorp\Bundle\EasyAdminBundle\Field\FormField;
+use Doctrine\ORM\Mapping as ORM;
+
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+
 
 class CourseCrudController extends AbstractCrudController
 {
@@ -32,12 +38,41 @@ class CourseCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
+            
+        FormField::addTab('Course')->setIcon('fa fa-running'),
+            TextField::new('image', 'Lien de l\'image'),
             TextField::new('titre', 'Titre'),
             TextField::new('format', 'Format'),
             NumberField::new('prix', 'Prix'),
             TextField::new('challenge', 'Challenge'),
-//            EntityCollection::new([CourseCategory::class])
-            AssociationField::new('courseCategory', 'Catégorie')
-        ];
+            AssociationField::new('courseCategory', 'Catégorie'),
+            
+        FormField::addTab('Info')->setIcon('fa fa-info-circle'),
+            TextField::new('specificites', 'Specificites'),
+            TextField::new('catAge', 'Categories d\'âges'),
+            DateTimeField::new('clotInscr', 'Clôture des inscriptions'),
+            
+        FormField::addTab('Horaires')->setIcon('fa fa-clock'),
+            TextField::new('jour', 'Jour de la course'),
+            TextField::new('horaires', 'Details sur les horaires'),
+            TextField::new('horaires2', 'Départs des courses'),
+            
+        FormField::addTab('Tarifs')->setIcon('fa fa-money'),
+            NumberField::new('individuel', 'Prix individuel de la course'),
+            TextField::new('detailNonL', 'Détails pour les non licenciés'),
+            NumberField::new('relais', 'Prix relais de la course')->setRequired(false),
+            TextField::new('detailNonLR', 'Détails pour les non licenciés')->setRequired(false),
+            NumberField::new('duo', 'Prix duo de la course')->setRequired(false),
+            TextField::new('detailNonLD', 'Détails pour les non licenciés')->setRequired(false),
+           
+        FormField::addTab('Trajets')->setIcon('fa fa-map'),
+            TextField::new('mapRace', 'Lien du trajet de la course'),
+            TextField::new('mapRace2', 'Autre lien de trajet')->setRequired(false),
+            TextField::new('mapRace3', 'Autre lien de trajet')->setRequired(false),
+            
+        FormField::addTab('Assurance')->setIcon('fa fa-shield'),
+            NumberField::new('prixAss', 'Prix de l\'assurance'),
+      ];
     }
+   
 }

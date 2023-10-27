@@ -18,11 +18,12 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 100%;    
     background-color: #2e2e2e;
 }
 
 .section-content{
+    font-size: 25px;
     padding: 15px; 
     align-items: center;
     display: grid;
@@ -31,10 +32,11 @@ body{
     min-width: 60%;
     max-width: 90%;
     width: auto;
+    margin-bottom: 2%;
 }
 
 .section-title{
-    font-size: 2em;
+   
     margin: 0;
     display: flex;
     align-items: center;
@@ -49,19 +51,19 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: wrap-content;
+    height: 100%;
     width: 100%;
     border-radius: 25px;
     border-width: 1px;
+    
     border-style: solid;
     margin: 10px;
     top: 0;
-    padding-bottom: 20px;
+   
 }
 
 .section-element::before{
     content: '';
-    background-image: url("https://half.toac-triathlon.com/wp-content/uploads/2023/03/velo-scaled.jpg");
     background-size: cover;
     background-position: top center;
     border-radius: 25px;
@@ -94,6 +96,7 @@ body{
 
 #swimrun .section-title{
     background-image: linear-gradient(to right, #3c5cfc, #fefefe);
+ 
 }
 
 #triathlon .price{
