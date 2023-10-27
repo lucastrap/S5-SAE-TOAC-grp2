@@ -5,158 +5,26 @@
         {% for category in categories %}
             <div class="section">
                 <div class="section-title"
-                style="background-image: linear-gradient(to right, {{ category.colour }}, white)">
+                    style="background-image: linear-gradient(to right, {{ category.colour }}, white)">
                     {% if category.colour[1:3] > 'cc' or category.colour[3:5] > 'cc' %}
                         <h1 class="text-black">{{ category.name }}</h1>
-                        {% else %}
+                    {% else %}
                         <h1 class="text-gray-100">{{ category.name }}</h1>
                     {% endif %}
                 </div>
                 <div class="section-content">
                     {% for race in category.getCourses %}
                         <a href="{{ path('app_race_show', {'id' : race.id}) }}"
-                           class="w-max-1/3 p-7 text-center hover:bg-amber-400 w-full border border-lime-500 rounded-3xl m-2.5 bg-[url] transition ease-in delay-5O duration-300">
+                           class="w-max-1/3 p-7 text-center w-full border border-lime-500 rounded-3xl m-2.5 transition ease-in delay-50 duration-300 section-element">
                             <h1>{{ race.titre }}</h1>
                             <h2>{{ race.format }}</h2>
-                            <p style="color:lightgray">{{race.format}}</p>
+                            <p style="color:lightgray">{{ race.challenge }}</p>
                             <h3 class="price text-lime-500">{{ race.prix }}€</h3>
+                            {% set backgroundImage = race.image %}<!-- Faire en  sorte de récuperer l'image du textField du dashboard -->
                         </a>
                     {% endfor %}
                 </div>
             </div>
         {% endfor %}
-        <div class="section" id="triathlon">
-            <div class="section-title">
-                <h1>TRIATHLON</h1>
-            </div>
-            <div class="section-content">
-
-                <div class="w-max-1/3 p-7 text-center w-full border border-lime-500 rounded-3xl m-2.5">
-                    <h1>INDIVIDUEL</h1>
-                    <h2>FORMAT S</h2>
-                    <p style="color:lightgray">Challenge écoles</p>
-                    <h3 class="price">30€</h3>
-                    <div class="details">
-                        <a>
-                            Détails
-                            <span class="arrow">-></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="section-element">
-                    <h1>INDIVIDUEL</h1>
-                    <h2>FORMAT M</h2>
-                    <p style="color:lightgray">Championnats Régionnaux Occitanie</p>
-                    <h3 class="price">40€</h3>
-                    <div class="details">
-                        <a>
-                            Détails
-                            <span class="arrow">-></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="section-element">
-                    <h1>INDIVIDUEL</h1>
-                    <h2>FORMAT L</h2>
-                    <p style="color:lightgray">.</p>
-                    <h3 class="price">80€</h3>
-                    <div class="details">
-                        <a>
-                            Détails
-                            <span class="arrow">-></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="section-element">
-                    <h1>RELAIS</h1>
-                    <h2>FORMAT S</h2>
-                    <p style="color:lightgray">Challenge écoles</p>
-                    <h3 class="price">40€</h3>
-                    <div class="details">
-                        <a>
-                            Détails
-                            <span class="arrow">-></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="section-element">
-                    <h1>RELAIS</h1>
-                    <h2>FORMAT M</h2>
-                    <p style="color:lightgray">.</p>
-                    <h3 class="price">50€</h3>
-                    <div class="details">
-                        <a>
-                            Détails
-                            <span class="arrow">-></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="section-element">
-                    <h1>RELAIS & DUO</h1>
-                    <h2>FORMAT L</h2>
-                    <p style="color:lightgray">.</p>
-                    <h3 class="price">90€ / 160€</h3>
-                    <div class="details">
-                        <a>
-                            Détails
-                            <span class="arrow">-></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section" id="aquathlon">
-            <div class="section-title">
-                <h1>AQUATHLON</h1>
-            </div>
-            <div class="section-content">
-                <div class="section-element">
-                    <h2>JEUNES</h2>
-                    <p style="color:lightgray">Catégories Poussins & Pupilles</p>
-                    <h3 class="price">5€</h3>
-                    <div class="details">
-                        <a>
-                            Détails
-                            <span class="arrow">-></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="section-element">
-                    <h2>FORMAT XS</h2>
-                    <p style="color:lightgray">.</p>
-                    <h3 class="price">12€</h3>
-                    <div class="details">
-                        <a>
-                            Détails
-                            <span class="arrow">-></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section" id="swimrun">
-            <div class="section-title">
-                <h1>SWIMRUN</h1>
-            </div>
-            <div class="section-content">
-                <div class="section-element">
-                    <h2>FORMAT S</h2>
-                    <p style="color:lightgray">Individuel & Duo/p>
-                    <h3 class="price">20€ / 40€</h3>
-                    <div class="details">
-                        <a>
-                            Détails
-                            <span class="arrow">-></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div> 
 {% endblock %}

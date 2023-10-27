@@ -61,7 +61,7 @@ body{
 
 .section-element::before{
     content: '';
-    background-image: url("https://half.toac-triathlon.com/wp-content/uploads/2023/03/velo-scaled.jpg");
+    background-image: url('{{ race.image }}');/** MUST CHANGE*/
     background-size: cover;
     background-position: top center;
     border-radius: 25px;

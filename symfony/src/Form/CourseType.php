@@ -12,6 +12,7 @@ class CourseType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+            ->add('image')
             ->add('titre')
             ->add('format')
             ->add('prix')
@@ -28,7 +29,6 @@ class CourseType extends AbstractType
             ->add('detailNonLR')
             ->add('duo')
             ->add('detailNonLD')
-            ->add('image')
             ->add('prixAss')
             ->add('mapRace')
             ->add('mapRace2')
