@@ -6,6 +6,7 @@ use Doctrine\DBAL\Types\Types;
 use App\Repository\CourseRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+
 #[ORM\Entity(repositoryClass: CourseRepository::class)]
 class Course
 {
