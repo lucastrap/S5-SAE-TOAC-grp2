@@ -11,6 +11,12 @@ p {
     width: 100%;
 }
 
+hr{
+    width: 100%;
+    color: #000000;
+    border-color: #000000;
+}
+
 .main-container{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
