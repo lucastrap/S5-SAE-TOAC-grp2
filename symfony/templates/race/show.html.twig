@@ -12,21 +12,122 @@
             <img id="sumup-img" src="https://half.toac-triathlon.com/wp-content/uploads/2023/03/DistancesS.png" alt="a">
         </section>
         <section class="section" id="race-details">
-                <div id="blocks">
-                    <div id="block-infos">
-                        <p>INFOS+</p>
-                    </div>
-                    <div id="block-horaires">
-                        <p>HORAIRES</p>
-                    </div>
-                    <div id="block-tarifs">
-                        <p>TARIFS</p>
-                    </div>
+            <div id="blocks">
+                <div id="block-infos" name="blockInfos">
+                    <h3>INFOS+</h3>
                 </div>
-                <div id="buttons">
-                    <a href="https://www.tiptiptop.top/37/inscription-en-ligne-triathlon-nailloux.html">S'inscrire</a>
-                    <a href="https://half.toac-triathlon.com/courses/reglement/">Règlement de la course</a>
+                <div id="block-horaires" name="blockHoraires">
+                    <h3>HORAIRES</h3>
                 </div>
+                <div id="block-tarifs" name="blockTarifs">
+                    <h3>TARIFS</h3>
+                </div>
+
+                <script>
+
+                    let contenuCarreInfos = `
+                    <h3>INFOS+</h3>
+                    `;
+
+                    let contenuCarreHoraires = `
+                    <h3>HORAIRES</h3>
+                    `;
+
+                    let contenuCarreTarifs = `
+                    <h3>TARIFS</h3>
+                    `;
+
+                    let hcontenuCarreInfos = `
+                        <h3 class="titre2"><b>Spécificités</b></h3>
+                        
+                        <p>{{ race.specificites }}</p>
+
+                        <h3 class="titre2"><b>Catégories d’âges</b></h3>
+
+                        <p>{{ race.catAge }}</p>
+
+                        <h3 class="titre2"><b>Clôture des Inscriptions</b></h3>
+
+                        <p><b>{{ race.clotInscr|date('Y-m-d H:i:s') }}</b></p>
+                    `;
+                    let hcontenuCarreHoraires = `
+                        <h3 style="text-transform:uppercase"><b>{{ race.jour }}</b></h3>
+                        
+                        <p>{{ race.horaires }}</p>
+
+                        <p>{{ race.horaires2 }}</p>
+                    `;
+
+                    let hcontenuCarreTarifs = `
+                        <h3 class="titre1"><b>INDIVIDUEL</b></h3>
+                        
+                        <p><span class="prix">{{ race.individuel }}€</span> <br>{{ race.detailNonL }} pour les non licenciés</p> 
+
+                    `;
+
+                    {% if race.relais > 0 %}
+                        hcontenuCarreTarifs += `
+                        <h3 class="titre1"><b>RELAIS</b></h3>
+                        
+                        <p><span class="prix">{{ race.relais }}€</span> <br>{{ race.detailNonLR }} pour les non licenciés</p>
+
+                    `;
+                    {% endif %}
+
+                    {% if race.duo > 0 %}
+                        hcontenuCarreTarifs += `
+                        <h3 class="titre1"><b>DUO</b></h3>
+                        
+                        <p><span class="prix">{{ race.duo }}€</span> par équipe <br>{{ race.detailNonLD }} pour les non licenciés</p>
+
+                    `;
+                    {% endif %}
+                
+                    const blockInfos = document.querySelector('[name="blockInfos"]');
+                    const blockHoraires = document.querySelector('[name="blockHoraires"]');
+                    const blockTarifs = document.querySelector('[name="blockTarifs"]');
+                
+                    blockInfos.addEventListener('mouseenter', () => {
+                        // Changez le texte et le style du carré au survol
+                        blockInfos.innerHTML = hcontenuCarreInfos;
+                        blockInfos.classList.add('hovered');
+                    });
+                
+                    blockInfos.addEventListener('mouseleave', () => {
+                        // Rétablissez le contenu par défaut et le style lorsque le survol est terminé
+                        blockInfos.innerHTML = contenuCarreInfos;
+                        blockInfos.classList.remove('hovered');
+                    });
+                
+                    blockHoraires.addEventListener('mouseenter', () => {
+                        // Changez le texte et le style du carré au survol
+                        blockHoraires.innerHTML = hcontenuCarreHoraires;
+                        blockHoraires.classList.add('hovered');
+                    });
+                
+                    blockHoraires.addEventListener('mouseleave', () => {
+                        // Rétablissez le contenu par défaut et le style lorsque le survol est terminé
+                        blockHoraires.innerHTML = contenuCarreHoraires;
+                        blockHoraires.classList.remove('hovered');
+                    });
+
+                    blockTarifs.addEventListener('mouseenter', () => {
+                        // Changez le texte et le style du carré au survol
+                        blockTarifs.innerHTML = hcontenuCarreTarifs;
+                        blockTarifs.classList.add('hovered');
+                    });
+                
+                    blockTarifs.addEventListener('mouseleave', () => {
+                        // Rétablissez le contenu par défaut et le style lorsque le survol est terminé
+                        blockTarifs.innerHTML = contenuCarreTarifs;
+                        blockTarifs.classList.remove('hovered');
+                    });
+                </script>
+            </div>
+            <div id="buttons">
+                <a href="https://www.tiptiptop.top/37/inscription-en-ligne-triathlon-nailloux.html">S'inscrire</a>
+                <a href="https://half.toac-triathlon.com/courses/reglement/">Règlement de la course</a>
+            </div>
         </section>
         <section class="section" id="map-details">
             <h1>PARCOURS</h2>

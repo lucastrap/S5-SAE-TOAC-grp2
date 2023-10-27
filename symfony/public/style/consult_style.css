@@ -6,6 +6,11 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
+p {
+    text-align: center;
+    width: 100%;
+}
+
 .main-container{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -85,15 +90,27 @@ body{
     gap:7%;
 }
 
+#blocks > div{
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    color: #fefefe;
+
+    h3 {
+        margin: 0;
+        text-align: left;
+        width: 100%;
+    }
+    
+}
+
 #block-infos{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     width: 20%;
     height: 100%;
-    gap: 5%;
+    font-size: 12;
 }
 
 #block-horaires{
@@ -101,10 +118,10 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     width: 40%;
-    height: 100%;
-    gap: 5%;
+    min-height: 100%;
+    font-size: 12;
 }
 
 #block-tarifs{
@@ -112,10 +129,47 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     width: 20%;
     height: 100%;
-    gap: 5%;
+    font-size: 12;
+}
+
+#block-infos.hovered{
+    background-color: rgba(255, 255, 255, 1); 
+    transform: scale(1.1); /* Effectuez une légère mise à l'échelle au survol */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, content 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: black;
+    opacity: 1; /* Fait apparaître le texte au survol */
+}
+
+#block-horaires.hovered{
+    background-color: rgba(255, 255, 255, 1); 
+    transform: scale(1.1); /* Effectuez une légère mise à l'échelle au survol */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, content 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: black;
+    opacity: 1; /* Fait apparaître le texte au survol */
+}
+
+#block-tarifs.hovered{
+    background-color: rgba(255, 255, 255, 1); 
+    transform: scale(1.1); /* Effectuez une légère mise à l'échelle au survol */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, content 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: black;
+    opacity: 1; /* Fait apparaître le texte au survol */
+}
+
+.titre1{
+    width: 100%;
+    background-color: #90c43c;
+    text-align: center;
+    color:#fefefe
+}
+
+.titre2{
+    color: #90c43c;
+    width: 100%;
+    margin-left: 10px;
 }
 
 #buttons{
@@ -218,4 +272,8 @@ body{
 #prix-course{
     color: #90c43c;
     font-size: 3em;
+}
+
+.prix{
+    color: #90c43c;
 }

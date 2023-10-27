@@ -44,7 +44,7 @@ body{
 
 .square.hovered {
     
-    background-color: rgba(255, 255, 255, 0.8); /* Changez la couleur de fond au survol */
+    background-color: rgba(255, 255, 255, 1); /* Changez la couleur de fond au survol */
     transform: scale(1.1); /* Effectuez une légère mise à l'échelle au survol */
     height: 35%;
     width: 120%;
@@ -53,7 +53,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, content 0.3s ease-in-out, color 0.3s ease-in-out;
     color: rgb(0, 0, 0);
     font-size: 15px;
     opacity: 1; /* Fait apparaître le texte au survol */
