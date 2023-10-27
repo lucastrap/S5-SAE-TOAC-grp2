@@ -14,48 +14,60 @@
         <section class="section" id="race-details">
             <div id="blocks">
                 <div id="block-infos" name="blockInfos">
-                    <h3>INFOS+</h3>
+                    <h3 class="titre3">INFOS+</h3>
                 </div>
                 <div id="block-horaires" name="blockHoraires">
-                    <h3>HORAIRES</h3>
+                    <h3 class="titre3">HORAIRES</h3>
                 </div>
                 <div id="block-tarifs" name="blockTarifs">
-                    <h3>TARIFS</h3>
+                    <h3 class="titre3">TARIFS</h3>
                 </div>
 
                 <script>
 
                     let contenuCarreInfos = `
-                    <h3>INFOS+</h3>
+                    <h3 class="titre3">INFOS+</h3>
                     `;
 
                     let contenuCarreHoraires = `
-                    <h3>HORAIRES</h3>
+                    <h3 class="titre3">HORAIRES</h3>
                     `;
 
                     let contenuCarreTarifs = `
-                    <h3>TARIFS</h3>
+                    <h3 class="titre3">TARIFS</h3>
                     `;
 
                     let hcontenuCarreInfos = `
-                        <h3 class="titre2"><b>Spécificités</b></h3>
-                        
-                        <p>{{ race.specificites }}</p>
+                        <div class="zone-texte">
+                            <h3 class="titre2"><b>Spécificités</b></h3>
+                            
+                            <p>{{ race.specificites }}</p>
+                        </div>
 
-                        <h3 class="titre2"><b>Catégories d’âges</b></h3>
+                        <div class="milieu zone-texte">
+                            <h3 class="titre2"><b>Catégories d’âges</b></h3>
 
-                        <p>{{ race.catAge }}</p>
+                            <p>{{ race.catAge }}</p>
+                        </div>
 
-                        <h3 class="titre2"><b>Clôture des Inscriptions</b></h3>
+                        <div class="zone-texte">
+                            <h3 class="titre2"><b>Clôture des Inscriptions</b></h3>
 
-                        <p><b>{{ race.clotInscr|date('Y-m-d H:i:s') }}</b></p>
+                            <p><b>{{ race.clotInscr|date('Y-m-d H:i:s') }}</b></p>
+                        </div>
                     `;
                     let hcontenuCarreHoraires = `
-                        <h3 style="text-transform:uppercase"><b>{{ race.jour }}</b></h3>
-                        
-                        <p>{{ race.horaires }}</p>
+                        <div class="zone-texte">
+                            <h3 class="titre4" style="text-transform:uppercase"><b>{{ race.jour }}</b></h3>
+                        </div>
 
-                        <p>{{ race.horaires2 }}</p>
+                        <div class="zone-texte milieu">
+                            <p>{{ race.horaires }}</p>
+                        </div>
+
+                        <div class="zone-texte">
+                            <p>{{ race.horaires2 }}</p>
+                        </div>
                     `;
 
                     let hcontenuCarreTarifs = `
@@ -132,16 +144,25 @@
         <section class="section" id="map-details">
             <h1>PARCOURS</h2>
             <div id="maps">
+<<<<<<< Updated upstream
                 <div id="map1">
                     <iframe src="https://www.google.com/maps/d/embed?mid=1211Oo0OCh1LxZL4XUld8sY4dVItQvok&hl=fr&ehbc=2E312F" width="100%" height="100%"></iframe>
                 </div>
+=======
+                {% if race.mapRace2 != "" %}
+                    <div id="map1">
+                        <iframe src="{{race.mapRace2}}" width="100%" height="100%"></iframe>
+                    </div>
+                {% endif %}
+>>>>>>> Stashed changes
                 <div id="map2">
-                    <p>map2</p><!-- mapRace2 -->
+                    <iframe src="{{race.mapRace}}" width="100%" height="100%"></iframe>
                 </div>
-                <div id="map3">
-                    <p>map3</p><!-- mapRace3 -->
-                </div>
-            </div>
+                {% if race.mapRace3 != "" %}
+                    <div id="map3">
+                        <iframe src="{{race.mapRace3}}" width="100%" height="100%"></iframe>
+                    </div>  
+                {% endif %}
         </section>
         <section class="section" id="texte">
             <h2>Assurance "remboursement 100%"</h2>

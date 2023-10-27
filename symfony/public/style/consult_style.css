@@ -93,13 +93,6 @@ p {
 #blocks > div{
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
     color: #fefefe;
-
-    h3 {
-        margin: 0;
-        text-align: left;
-        width: 100%;
-    }
-    
 }
 
 #block-infos{
@@ -166,10 +159,39 @@ p {
     color:#fefefe
 }
 
+.zone-texte{
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+    text-wrap: wrap;
+}
+
+.zone-texte > p{
+    margin: 15px;
+    text-align: center;
+    width: calc(100% - 30px);
+}
+
 .titre2{
     color: #90c43c;
     width: 100%;
-    margin-left: 10px;
+    margin-left: 15px;
+}
+
+.titre3{
+    text-align: center;
+    width: 100% ;
+}
+
+.titre4{
+    color: #90c43c;
+    text-align: center;
+}
+
+.milieu{
+    border-top: black 1px solid;
+    border-bottom: black 1px solid;
+    min-height: 25%;
 }
 
 #buttons{
