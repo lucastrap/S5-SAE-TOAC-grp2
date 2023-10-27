@@ -12,19 +12,36 @@
                         <h1 class="text-gray-100">{{ category.name }}</h1>
                     {% endif %}
                 </div>
+                
                 <div class="section-content">
-                    {% for race in category.getCourses %}
-                        <a href="{{ path('app_race_show', {'id' : race.id}) }}"
-                           class="w-max-1/3 p-7 text-center w-full border border-lime-500 rounded-3xl m-2.5 transition ease-in delay-50 duration-300 section-element">
-                            <h1>{{ race.titre }}</h1>
-                            <h2>{{ race.format }}</h2>
-                            <p style="color:lightgray">{{ race.challenge }}</p>
-                            <h3 class="price text-lime-500">{{ race.prix }}€</h3>
-                            {% set backgroundImage = race.image %}<!-- Faire en  sorte de récuperer l'image du textField du dashboard -->
-                        </a>
-                    {% endfor %}
+    {% if category.getCourses is not empty %}
+        {% for race in category.getCourses %}
+            <style>
+                .course{{race.id}}::before {
+                    background-image: url("{{race.image}}");
+                }
+            </style>
+            
+            <a href="{{ path('app_race_show', {'id' : race.id}) }}"
+               class="w-max-1/3 p-7 text-center w-full border border-lime-500 rounded-2xl m-2.5 transition ease-in delay-50 duration-300 section-element course{{race.id}}"
+            >
+                <h1 class="text-[50px]">{{ race.titre }}</h1>
+                <div style="margin-top: 10px;"></div>
+                <h2 class="text-[35px]">{{ race.format }}</h2>
+                <div style="margin-top: 10px;"></div>
+                <p class="text-base/7 " style="color:lightgray ">{{ race.challenge }}</p>
+                <h3 class="price text-blue-500 text-base/7 ">{{ race.prix }}€</h3>
+            </a>
+        {% endfor %}
+    {% endif %}
+</div>
+
+                     
+
                 </div>
             </div>
         {% endfor %}
-    </div> 
+      
+    </div>
+
 {% endblock %}
