@@ -2,6 +2,8 @@
 
 {% block body %}
     <link rel="stylesheet" href="{{ asset('style/consult_style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         section::before{
             background-image: url("{{race.image}}");
@@ -13,27 +15,44 @@
         </section>
         <section class="section" id="race-details">
             <div id="blocks">
-                <div id="block-infos" name="blockInfos">
-                    <h3 class="titre3">INFOS+</h3>
+     <div id="block-infos" name="blockInfos">
+        <i class="icon-default-style fa fa-clock" style="font-size: 45px!important; line-height: 45px!important; color: deeppink;"></i>
+        <h3 class="titre3">
+            INFOS+
+        </h3>
+    </div>
+
+
+
+               <div id="block-horaires" name="blockHoraires">
+                <i class="icon-default-style fa fa-file-text"style="font-size: 45px!important; line-height: 45px!important; color: deeppink;"></i>
+                    <h3 class="titre3">
+                        HORAIRES
+                    </h3>
                 </div>
-                <div id="block-horaires" name="blockHoraires">
-                    <h3 class="titre3">HORAIRES</h3>
-                </div>
-                <div id="block-tarifs" name="blockTarifs">
-                    <h3 class="titre3">TARIFS</h3>
-                </div>
+
+              <div id="block-tarifs" name="blockTarifs">
+                <i class="icon-default-style fa fa-eur"style="font-size: 45px!important; line-height: 45px!important; color: deeppink;"></i>
+                <h3 class="titre3">
+                    TARIFS
+                </h3>
+            </div>
+
+
 
                 <script>
 
-                    let contenuCarreInfos = `
+                    let contenuCarreInfos = ` <i class="icon-default-style fa fa-clock"style="font-size: 45px!important; line-height: 45px!important; color: deeppink;"></i>
+                
                     <h3 class="titre3">INFOS+</h3>
                     `;
 
-                    let contenuCarreHoraires = `
-                    <h3 class="titre3">HORAIRES</h3>
+                    let contenuCarreHoraires = `  <i class="icon-default-style fa fa-file-text"style="font-size: 45px!important; line-height: 45px!important; color: deeppink;"></i>
+                       <h3 class="titre3">HORAIRES+</h3>
                     `;
 
-                    let contenuCarreTarifs = `
+                    let contenuCarreTarifs = `   <i class="icon-default-style fa fa-eur" style="font-size: 45px!important; line-height: 45px!important; color: deeppink;"></i>
+               
                     <h3 class="titre3">TARIFS</h3>
                     `;
 

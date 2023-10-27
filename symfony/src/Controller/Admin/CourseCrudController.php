@@ -50,7 +50,7 @@ class CourseCrudController extends AbstractCrudController
         return [
             
         FormField::addTab('Course')->setIcon('fa fa-running'),
-            UrlField::new('image', 'Lien de l\'image'),
+            UrlField::new('image', 'Lien de l\'image(url)'),
             TextField::new('titre', 'Titre'),
             TextField::new('format', 'Format'),
             NumberField::new('prix', 'Prix'),
@@ -76,15 +76,35 @@ class CourseCrudController extends AbstractCrudController
             TextField::new('detailNonLD', 'Détails pour les non licenciés')->setRequired(false),
            
         FormField::addTab('Trajets')->setIcon('fa fa-map'),
-        UrlField::new('openRunner', 'lien du OpenRunner'),
-        UrlField::new('mapRace', 'Lien du trajet de la course'),
-        UrlField::new('mapRace2', 'Autre lien de trajet')->setRequired(false),
-        UrlField::new('mapRace3', 'Autre lien de trajet')->setRequired(false),
+        UrlField::new('openRunner', 'lien du OpenRunner(url)'),
+        UrlField::new('mapRace', 'Lien du trajet de la course(url)'),
+        UrlField::new('mapRace2', 'Autre lien de trajet(url)')->setRequired(false),
+        UrlField::new('mapRace3', 'Autre lien de trajet(url)')->setRequired(false),
             
             
         FormField::addTab('Assurance')->setIcon('fa fa-shield'),
             NumberField::new('prixAss', 'Prix de l\'assurance'),
       ];
     }
+
+    public function updateEntity(EntityManagerInterface $entityManager, $entityInstance): void
+{
+    // Validez l'entité avant de la mettre à jour dans la base de données
+    $validator = $this->get('validator');
+    $errors = $validator->validate($entityInstance);
+
+    if (count($errors) > 0) {
+        // S'il y a des erreurs de validation, ajoutez-les au formulaire
+        $formErrors = $this->get('form.factory')->createBuilder()->getForm();
+        foreach ($errors as $error) {
+            $formErrors->get($error->getPropertyPath())->addError(new FormError($error->getMessage()));
+        }
+
+        throw new FormValidationException($formErrors);
+    }
+
+    // Mettez à jour l'entité dans la base de données
+    parent::updateEntity($entityManager, $entityInstance);
+}
    
 }
