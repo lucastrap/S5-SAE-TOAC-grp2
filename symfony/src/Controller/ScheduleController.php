@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controller;
 
 use App\Entity\Evenement;
@@ -28,9 +27,15 @@ class ScheduleController extends AbstractController
         // Limit the number of unique dates to two
         $uniqueDates = array_slice($uniqueDates, 0, 2);
 
+        // You can also limit the number of events per date here if needed
+        $limitedGroupedEvents = [];
+        foreach ($uniqueDates as $date) {
+            $limitedGroupedEvents[$date] = $groupedEvents[$date];
+        }
+
         return $this->render('schedule/index.html.twig', [
             'controller_name' => 'ScheduleController',
-            'groupedEvents' => $groupedEvents,
+            'groupedEvents' => $limitedGroupedEvents,
             'uniqueDates' => $uniqueDates,
         ]);
     }

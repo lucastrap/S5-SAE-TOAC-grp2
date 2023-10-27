@@ -22,7 +22,7 @@
 .square {
     background-color: rgba(0, 0, 0, 0.8);
     height: 35%;
-    width: 120%;
+    width: 350px;
     padding-right: 10%;
     display: flex;
     justify-content: center;
@@ -48,7 +48,7 @@
     background-color: rgba(255, 255, 255, 0.8); /* Changez la couleur de fond au survol */
     transform: scale(1.1); /* Effectuez une légère mise à l'échelle au survol */
     height: 35%;
-    width: 120%;
+    width: 350px;
     padding-right: 10%;
     display: flex;
     flex-direction: column;
@@ -76,7 +76,7 @@
         #}
 
         {% set squareCount = 1 %}
-    
+     
         {# Iterate through unique dates and display them in squares #}
         {% for date in uniqueDates %}
             {% if squareCount > 2 %}
@@ -98,7 +98,7 @@
                 </div>
             {% endif %}
         {% endfor %}
-        <div class="square invisible"></div>
+       
     </div>
     <script src="{{ asset('js/programme.js') }}" defer></script>
 {% endblock %}

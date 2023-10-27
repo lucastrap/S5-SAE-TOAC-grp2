@@ -77,6 +77,10 @@ class Course
     #[ORM\Column(length: 999)]
     private ?string $mapRace = null;
 
+    #[ORM\Column(length: 999)]
+    private ?string $openRunner = null;
+
+
     #[ORM\Column(length: 999, nullable: true)]
     private ?string $mapRace2 = null;
 
@@ -94,6 +98,19 @@ class Course
 
         return $this;
     }
+
+    public function getOpenRunner(): ?string
+    {
+        return $this->openRunner;
+    }
+
+    public function setOpenRunner(?string $openRunner): static
+    {
+        $this->openRunner = $openRunner;
+
+        return $this;
+    }
+
     public function getMapRace2(): ?string
     {
         return $this->mapRace2;

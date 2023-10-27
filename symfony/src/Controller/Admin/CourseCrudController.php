@@ -66,9 +66,11 @@ class CourseCrudController extends AbstractCrudController
             TextField::new('detailNonLD', 'Détails pour les non licenciés')->setRequired(false),
            
         FormField::addTab('Trajets')->setIcon('fa fa-map'),
+        TextField::new('openRunner', 'lien du OpenRunner'),
             TextField::new('mapRace', 'Lien du trajet de la course'),
             TextField::new('mapRace2', 'Autre lien de trajet')->setRequired(false),
             TextField::new('mapRace3', 'Autre lien de trajet')->setRequired(false),
+            
             
         FormField::addTab('Assurance')->setIcon('fa fa-shield'),
             NumberField::new('prixAss', 'Prix de l\'assurance'),
