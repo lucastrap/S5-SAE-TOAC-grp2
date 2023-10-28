@@ -47,3 +47,10 @@ justify-content: center; /* Centrer horizontalement */
 align-items: center; /* Centrer verticalement */
 height: 100%; /* Assurez-vous que la div parente prend toute la hauteur disponible */
 }
+
+@media (max-width: 768px) {
+    .square {
+        width: 90% !important;
+        height: 100%;
+    }
+}

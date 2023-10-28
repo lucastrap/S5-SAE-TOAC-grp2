@@ -72,13 +72,14 @@ transform: scale(1); /* Rétablir la taille normale du sous-menu */
 
 /* Utilisez une règle de média query pour ajuster la mise en page sur les petits écrans */
 @media (max-width: 768px) {
-    .bandeau_gauche {
-        width: 100%;
+    .grid {
+        display: flex !important;
+        flex-direction: column;
+        width: 90% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
     }
 
-    .bandeau-droite {
-        width: 100%;
-    }
 }
 
     .container{

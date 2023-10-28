@@ -134,3 +134,25 @@ body{
 }
 
 */
+
+@media (max-width: 768px) {
+    .section-content{
+        grid-template-columns: 100%;
+        gap: 20px;
+    }
+    .section-element{
+        width: 100%;
+        margin: 0;
+    }
+    .section-title{
+        width: 100%;
+        font-size: 1.5em;
+    }
+    #triathlon .section-title{
+        background-image: linear-gradient(to right, #98cc4c, #caf885);
+    }
+
+    #aquathlon .section-title, #swimrun .section-title{
+        background-image: linear-gradient(to right, #3c5cfc, #7088ff);
+    }
+}

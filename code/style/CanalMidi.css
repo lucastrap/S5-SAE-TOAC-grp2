@@ -67,12 +67,19 @@ transform: scale(1); /* Rétablir la taille normale du sous-menu */
 
 /* Utilisez une règle de média query pour ajuster la mise en page sur les petits écrans */
 @media (max-width: 768px) {
-    .bandeau_gauche {
-        width: 100%;
+    .square {
+        width: 90% !important;
+        height: 100%;
     }
 
-    .bandeau-droite {
-        width: 100%;
+    .container2{
+        flex-direction: column;
+        gap: 30px !important;
+        margin: 20px 0 !important;
+    }
+
+    #slider img{
+        width: 100% !important;
     }
 }
 
