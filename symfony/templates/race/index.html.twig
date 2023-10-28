@@ -35,16 +35,16 @@
                                     background-image: url("https://half.toac-triathlon.com/wp-content/uploads/2023/03/velo-scaled.jpg");
                                 }
                             </style>
-                            {% if category.name != "TRIATHLON" %}
+                            {% if category.name == "TRIATHLON" %}
                                 <style>
                                     .course{{race.id}}::after {
-                                        background-image: linear-gradient(135deg,rgb(184,52,63), rgb(61,75,212));
+                                        background-image: linear-gradient(135deg,rgb(197,40,129), rgb(62,74,217));
                                     }
                                 </style>
                             {% else %}
                                 <style>
                                     .course{{race.id}}::after {
-                                        background-image: linear-gradient(135deg,rgb(197,40,129), rgb(62,74,217));
+                                        background-image: linear-gradient(135deg,rgb(184,52,63), rgb(61,75,212));
                                     }
                                 </style>
                             {% endif %}
