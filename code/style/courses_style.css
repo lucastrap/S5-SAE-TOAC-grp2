@@ -49,6 +49,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     height: wrap-content;
     width: 100%;
     border-radius: 25px;
@@ -66,6 +67,7 @@ body{
     background-position: top center;
     border-radius: 25px;
     position: absolute;
+    transition: opacity 0.5s ease-in-out;
     top: 0px;
     right: 0px;
     bottom: 0px;
@@ -81,7 +83,7 @@ body{
 
 .section-element:hover::before{
     opacity: 50%;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 
 #triathlon .section-title{
@@ -118,6 +120,17 @@ body{
 
 #swimrun .section-element {
     border-color: #3c5cfc;
+}
+
+.details{
+    text-decoration: none;
+    color: #fefefe;
+}
+
+.details:hover{
+    span{
+        content: "O";
+    }
 }
 
 /*

@@ -1,0 +1,307 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #000000;
+    font-family: 'Oswald', sans-serif;
+}
+
+p {
+    text-align: center;
+    width: 100%;
+}
+
+hr{
+    width: 100%;
+    color: #000000;
+    border-color: #000000;
+}
+
+.main-container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100vh);
+}
+
+.section{   
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+#race-sumup{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh);
+    scroll-snap-align: start;
+}
+
+#race-sumup::before{
+    content: '';
+    z-index: 0;
+    background-size: cover;
+    background-position: top center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; 
+    opacity: 45%;
+}
+
+#sumup-img{
+    width: 100%;
+    object-fit: contain;
+    max-height: 350px;
+    z-index: 1;
+}
+
+#race-details{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    height: calc(100vh);
+    scroll-snap-align: start;
+    gap:5%;
+}
+
+#race-details::before{
+    content: '';
+    z-index: 0;
+    background-size: cover;
+    background-position: top center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; 
+    opacity: 65%;
+}
+
+#race-details > *{
+    z-index: 1;
+}
+
+#blocks{
+    display: flex;  
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    gap:7%;
+}
+
+#blocks > div{
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    color: #fefefe;
+}
+
+#block-infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 20%;
+    height: 100%;
+    font-size: 12;
+}
+
+#block-horaires{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 40%;
+    min-height: 100%;
+    font-size: 12;
+}
+
+#block-tarifs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 20%;
+    height: 100%;
+    font-size: 12;
+}
+
+#block-infos.hovered{
+    background-color: rgba(255, 255, 255, 1); 
+    transform: scale(1.1); /* Effectuez une légère mise à l'échelle au survol */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, content 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: black;
+    opacity: 1; /* Fait apparaître le texte au survol */
+}
+
+#block-horaires.hovered{
+    background-color: rgba(255, 255, 255, 1); 
+    transform: scale(1.1); /* Effectuez une légère mise à l'échelle au survol */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, content 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: black;
+    opacity: 1; /* Fait apparaître le texte au survol */
+}
+
+#block-tarifs.hovered{
+    background-color: rgba(255, 255, 255, 1); 
+    transform: scale(1.1); /* Effectuez une légère mise à l'échelle au survol */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, content 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: black;
+    opacity: 1; /* Fait apparaître le texte au survol */
+}
+
+.titre1{
+    width: 100%;
+    background-color: #90c43c;
+    text-align: center;
+    color:#fefefe
+}
+
+.zone-texte{
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+    text-wrap: wrap;
+}
+
+.zone-texte > p{
+    margin: 15px;
+    text-align: center;
+    width: calc(100% - 30px);
+}
+
+.titre2{
+    color: #90c43c;
+    width: 100%;
+    margin-left: 15px;
+}
+
+.titre3{
+    text-align: center;
+    width: 100% ;
+}
+
+.titre4{
+    color: #90c43c;
+    text-align: center;
+}
+
+.milieu{
+    border-top: black 1px solid;
+    border-bottom: black 1px solid;
+    min-height: 25%;
+}
+
+#buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+#buttons > a{
+    color: white;
+    border-radius: 25px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #f02484;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#buttons > a:hover{
+    opacity: 70%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#map-details{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh);
+    scroll-snap-align: start;
+    gap:5%;
+}
+
+#map-details::before{
+    content: '';
+    z-index: 0;
+    background-size: cover;
+    background-position: top center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; 
+    opacity: 75%;
+}
+
+#map-details > *{
+    z-index: 1;
+}
+
+#maps{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    gap:7%;
+}
+
+#maps > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    gap: 5%;
+}
+
+#texte{
+    color: black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: calc(100vh);
+    scroll-snap-align: start;
+    width: 65%;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+}
+
+#texte > *{
+    text-wrap: wrap;
+}
+
+#prix-course{
+    color: #90c43c;
+    font-size: 3em;
+}
+
+.prix{
+    color: #90c43c;
+}

@@ -13,32 +13,92 @@
     min-height: 100vh; /* Ajustez la hauteur de l'arrière-plan pour couvrir l'écran entier */
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap: 8%;
+    gap: 11%;
     align-items: center;
-   
+    justify-content: center;
+    text-align: center;
 }
 
 .square {
     background-color: rgba(0, 0, 0, 0.8);
     height: 35%;
-    width: 120%;
+    width: 350px;
     padding-right: 10%;
     display: flex;
     justify-content: center;
+    flex-direction: column; /* Permet au contenu d'être empilé verticalement */
     align-items: center;
-    transition: transform 0.3s; /* Ajoute une transition pour la transformation */
+    transition: transform 0.3s , background-color 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Ajoute une transition pour la transformation */
+}
+
+.square h2,
+.square p {
+    font-size: 24;
+    margin: 0;
+    text-align: center;
+    opacity: 1; /* Rend le texte visible par défaut */
 }
 
 .invisible {
     visibility: hidden;
 }
 
+.square.hovered {
+    
+    background-color: rgba(255, 255, 255, 0.8); /* Changez la couleur de fond au survol */
+    transform: scale(1.1); /* Effectuez une légère mise à l'échelle au survol */
+    height: 35%;
+    width: 350px;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    opacity: 1; /* Fait apparaître le texte au survol */
+}
+
 </style>
 
     <div class="background">
+        {#
         <div class="square invisible"></div>
-        <div class="square">Carré 1</div>
-        <div class="square">Carré 2</div>
-        <div class="square invisible"></div>
+        <div class="square" name="carre1"data-content="Carré 1"data-hover="test1">
+            <h2>Titre Carré 1</h2>
+            <p>Ceci est le texte du Carré 1.</p>
+        </div>
+        <div class="square" name="carre2"data-content="Carré 2"data-hover="test2">
+            <h2>Titre Carré 2</h2>
+            <p>Ceci est le texte du Carré 2.</p>
+        </div>
+        #}
+
+        {% set squareCount = 1 %}
+     
+        {# Iterate through unique dates and display them in squares #}
+        {% for date in uniqueDates %}
+            {% if squareCount > 2 %}
+                {# We've filled the two squares, end the loop #}
+            {% else %}
+            
+                <div class="square" name="carre{{ squareCount }}" data-content="{{ date }}" data-hover="">
+                    <h2>{{ date|date('l d F') }}</h2>
+                    <ul class="events-list" style="display: none;">
+                        <br>
+                        {% for event in groupedEvents[date] %}
+                            <li>{{ event.title }}</li>
+                            <li>{{ event.start }}</li>
+                            <br>
+                        {% endfor %}
+                     </ul>
+                    
+                    {% set squareCount = squareCount + 1 %}
+                </div>
+            {% endif %}
+        {% endfor %}
+       
     </div>
+    <script src="{{ asset('js/programme.js') }}" defer></script>
 {% endblock %}

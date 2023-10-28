@@ -21,6 +21,37 @@ class EvenementRepository extends ServiceEntityRepository
         parent::__construct($registry, Evenement::class);
     }
 
+    public function getEvenements()
+    {
+        $events = $this->createQueryBuilder('e')
+        ->select('e.title, e.start, e.toDate') // Select all relevant event fields
+        ->getQuery()
+        ->getResult();
+
+        $eventsArray = [];
+        foreach ($events as $event) {
+            $eventsArray[$event['title']] = $event;
+        }
+
+        return $eventsArray;
+    }
+
+    public function getDates()
+    {
+        $groupedEvents = [];
+
+        // Group events by date
+        foreach ($events as $event) {
+            $date = $event->getToDate(); // Assuming your Event class has a method to get the date
+            if (!isset($groupedEvents[$date])) {
+                $groupedEvents[$date] = [];
+            }
+            $groupedEvents[$date][] = $event;
+        }
+
+        return $groupedEvents;
+    }
+
 //    /**
 //     * @return Evenement[] Returns an array of Evenement objects
 //     */
