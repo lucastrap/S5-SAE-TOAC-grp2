@@ -12,7 +12,6 @@
                         <h1 class="text-gray-100">{{ category.name }}</h1>
                     {% endif %}
                 </div>
-                
                 <div class="section-content">
                     {% if category.getCourses is not empty %}
                         {% for race in category.getCourses %}
@@ -51,7 +50,5 @@
                 </div>
             </div>
         {% endfor %}
-      
-    </div>
-
+    </div> 
 {% endblock %}
