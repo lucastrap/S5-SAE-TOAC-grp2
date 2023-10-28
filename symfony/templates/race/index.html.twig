@@ -4,14 +4,29 @@
     <div class="main-container">
         {% for category in categories %}
             <div class="section">
-                <div class="section-title"
-                    style="background-image: linear-gradient(to right, {{ category.colour }}, white)">
-                    {% if category.colour[1:3] > 'cc' or category.colour[3:5] > 'cc' %}
-                        <h1 class="text-black">{{ category.name }}</h1>
+                {% if category.getCourses is not empty %}
+                    {% if category.name == "TRIATHLON" %}
+                        <style>
+                            .title-{{ category.name }} {
+                                background-image: linear-gradient(to right, #92c949, white);
+                            }
+                        </style>
                     {% else %}
-                        <h1 class="text-gray-100">{{ category.name }}</h1>
+                        <style>
+                            .title-{{ category.name }} {
+                                background-image: linear-gradient(to right, #3f5cff, white);
+                            }
+                        </style>
                     {% endif %}
-                </div>
+                    <div class="section-title title-{{category.name}}">
+                        {% if category.colour[1:3] > 'cc' or category.colour[3:5] > 'cc' %}
+                            <h1 class="text-black">{{ category.name }}</h1>
+                        {% else %}
+                            <h1 class="text-gray-100">{{ category.name }}</h1>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                
                 <div class="section-content">
                     {% if category.getCourses is not empty %}
                         {% for race in category.getCourses %}
@@ -49,6 +64,9 @@
 
                 </div>
             </div>
+
         {% endfor %}
-    </div> 
+      
+    </div>
+
 {% endblock %}
