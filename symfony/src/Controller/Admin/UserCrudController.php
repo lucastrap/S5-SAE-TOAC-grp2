@@ -14,6 +14,7 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class UserCrudController extends AbstractCrudController
 {
+
     public function __construct(
         public UserPasswordHasherInterface $userPasswordHasher,
     ) {}
@@ -41,7 +42,8 @@ class UserCrudController extends AbstractCrudController
             TextField::new('password')
                 ->setFormType(PasswordType::class)
                 ->setRequired($pageName === Crud::PAGE_NEW)
-                ->onlyOnForms(),
+                ->onlyOnForms()
+                ->setRequired(true),
         ];
     }
 
