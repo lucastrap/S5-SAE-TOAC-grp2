@@ -87,24 +87,6 @@ class CourseCrudController extends AbstractCrudController
       ];
     }
 
-    public function updateEntity(EntityManagerInterface $entityManager, $entityInstance): void
-{
-    // Validez l'entité avant de la mettre à jour dans la base de données
-    $validator = $this->get('validator');
-    $errors = $validator->validate($entityInstance);
 
-    if (count($errors) > 0) {
-        // S'il y a des erreurs de validation, ajoutez-les au formulaire
-        $formErrors = $this->get('form.factory')->createBuilder()->getForm();
-        foreach ($errors as $error) {
-            $formErrors->get($error->getPropertyPath())->addError(new FormError($error->getMessage()));
-        }
-
-        throw new FormValidationException($formErrors);
-    }
-
-    // Mettez à jour l'entité dans la base de données
-    parent::updateEntity($entityManager, $entityInstance);
-}
    
 }
