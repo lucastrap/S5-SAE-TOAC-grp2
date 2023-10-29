@@ -86,14 +86,22 @@
                             <p>{{ race.horaires2 }}</p>
                         </div>
                     `;
-
+                    
+                    {% if race.detailNonL != null %}
                     let hcontenuCarreTarifs = `
                         <h3 class="titre1"><b>INDIVIDUEL</b></h3>
                         
-                        <p><span class="prix">{{ race.individuel }}€</span> <br>{{ race.detailNonL }} pour les non licenciés</p> 
+                        <p><span class="prix">{{ race.individuel }}€</span> <br>+ {{ race.detailNonL }}€ pour les non licenciés</p> 
 
                     `;
+                    {% else %}
+                      let hcontenuCarreTarifs = `
+                        <h3 class="titre1"><b>INDIVIDUEL</b></h3>
+                        
+                        <p><span class="prix">{{ race.individuel }}€</span> </p> 
 
+                    `;
+                    {% endif %}
                     {% if race.relais > 0 %}
                         hcontenuCarreTarifs += `
                         <h3 class="titre1"><b>RELAIS</b></h3>
