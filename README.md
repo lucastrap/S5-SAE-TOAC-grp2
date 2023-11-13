@@ -26,6 +26,8 @@ Project presentation : [Toac Video](https://www.youtube.com/watch?v=hTjv_Lp5zr4)
 
 Once the project has been cloned, you have to install the dependencies (not commited in the github)
 
+(Pour la SAE 5 groupe ANALYSE = > Si vous rencontrez un probleme lors de l'installation contactez moi : lucastrap@live.fr)
+
 Install the dependecies (linux) : 
 ```
 apt update
