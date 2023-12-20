@@ -1,0 +1,21 @@
+# behat.yml
+
+default:
+    suites:
+        default:
+            paths:
+                - './features/AdminSite'
+            contexts:
+                - FeatureContext:
+                    kernel: '@kernel'
+                - Behat\MinkExtension\Context\MinkContext
+
+    extensions:
+        Behat\Symfony2Extension:
+            kernel:
+                env: test
+                debug: true
+
+        Behat\MinkExtension:
+            base_url: http://localhost
+            goutte: ~
