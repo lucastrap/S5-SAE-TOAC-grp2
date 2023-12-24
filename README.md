@@ -160,9 +160,9 @@ Project Phase 3: [Phase 3](https://github.com/lucastrap/S5-SAE-TOAC-grp2/issues?
 
 ## BDD Project
 
-[source,java]
----
-# features/authentication/login.feature
+[Features]
+```
+# features/exemple.feature
 Feature: Symfony Functionality
   In order to use my dashboard
   As a user
@@ -191,7 +191,7 @@ Feature: Symfony Functionality
     When I log out
     Then I have to log in again
 
----
+```
 
 
 .Test results
