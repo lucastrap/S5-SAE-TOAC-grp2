@@ -1,8 +1,8 @@
 # features/authentication/login.feature
-Feature: Login Functionality
-  In order to access my account
+Feature: Symfony Functionality
+  In order to use my dashboard
   As a user
-  I want to log in with valid or invalid credentials
+  I want to test its functionality
 
   Scenario: Successful Login
     Given I am on the login page
