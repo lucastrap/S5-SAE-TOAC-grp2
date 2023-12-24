@@ -195,5 +195,4 @@ Feature: Symfony Functionality
 
 
 .Test results
-
-image::Res_BDD.png[width=80%]
+![TOAC Triathlon](Res_BDD.png)
