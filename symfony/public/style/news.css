@@ -3,6 +3,16 @@ body {
     font-size: 16px; /* Utilisez des unités relatives pour la taille de police */
     
 }
+@media (max-width: 768px) {
+    .grid {
+        display: flex !important;
+        flex-direction: column;
+        width: 90% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+
+}
  
 .menu-item {
     cursor: pointer;

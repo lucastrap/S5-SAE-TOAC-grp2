@@ -32,10 +32,7 @@ class EvenementCrudController extends AbstractCrudController
             DateField::new('toDate', 'To Date'),
             TextField::new('title', 'Titre'),
             TextField::new('start', 'Start'),
-            
-//            EntityCollection::new([CourseCategory::class])
-//            AssociationField::new('courseCategory', 'Catégorie')
-            
+                  
         ];
     }
     

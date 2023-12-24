@@ -2,7 +2,10 @@
 
 ![TOAC Triathlon](./Images_Site/index_top.jpg)
 
-Latest release of the project : [Latest release](https://github.com/lucastrap/S5-SAE-TOAC-grp2/releases/tag/v2.0)
+Latest release of the project : [Latest release](https://github.com/lucastrap/S5-SAE-TOAC-grp2/releases/tag/v4.0)
+
+Project presentation : [Toac Video](https://www.youtube.com/watch?v=hTjv_Lp5zr4)
+
 ## The Team
 
 ### Initials students
@@ -22,6 +25,8 @@ Latest release of the project : [Latest release](https://github.com/lucastrap/S5
 ## Installation
 
 Once the project has been cloned, you have to install the dependencies (not commited in the github)
+
+(Pour la SAE 5 groupe ANALYSE = > Si vous rencontrez un probleme lors de l'installation contactez moi : lucastrap@live.fr)
 
 Install the dependecies (linux) : 
 ```
@@ -111,7 +116,7 @@ Our mission is to improve the TOAC Triathlon club website by implementing additi
 
 ### Current Project Progress:
 
-[██████████████████████████████████████████░░░░░] 87%
+[█████████████████████████████████████████████░░] 95%
 
 ### Here is a slideshow presenting the client and their needs: [TOAC Slideshow](https://docs.google.com/presentation/d/19AGVjNUYI3qM5f7slZo5BkiuPfHRaJR4KTdoPo22Uow/edit#slide=id.g27b0f7cac84_1_155)
 
@@ -145,7 +150,9 @@ Project Phase 3: [Phase 3](https://github.com/lucastrap/S5-SAE-TOAC-grp2/issues?
 ## Documents
 - [Technical Document](./documents/documentation_technique.adoc)
 - [Existing Analysis](./documents/AnalyseExistant.pdf)
-- [Final Report]
+
+#### Final Reports
+
 - [Mohamed Kerrouche Report](./documents/rapportsAlternants/KerroucheMohamedToec.pdf)
 - [Thomas Masin Report](./documents/rapportsAlternants/MasinThomasToec.pdf)
 - [Olivier Recher Report](./documents/rapportsAlternants/RecherOlivierToac.pdf)

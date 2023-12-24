@@ -33,6 +33,7 @@ class CourseType extends AbstractType
             ->add('mapRace')
             ->add('mapRace2')
             ->add('mapRace3')
+            ->add('openRunner')
 
         ;
     }

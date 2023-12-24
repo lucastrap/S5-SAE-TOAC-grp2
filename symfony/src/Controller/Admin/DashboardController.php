@@ -21,7 +21,7 @@ class DashboardController extends AbstractDashboardController
     public function index(): Response
     {
         $routeBuilder = $this->container->get(AdminUrlGenerator::class);
-        $url = $routeBuilder->setController(PostCrudController::class)->generateUrl();
+        $url = $routeBuilder->setController(CourseCrudController::class)->generateUrl();
 
         return $this->redirect($url);
     }
@@ -31,6 +31,7 @@ class DashboardController extends AbstractDashboardController
         return Dashboard::new()
             ->setTitle('TOAC')
             ->setLocales(["fr" => "🇫🇷 Français"])
+            
         ;
     }
 

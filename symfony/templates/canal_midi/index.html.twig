@@ -39,6 +39,14 @@
         overflow: hidden; /* Pour s'assurer que l'image ne dépasse pas la div */
     }
 
+    body{
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
 #precedent,
 #suivant {
 cursor: pointer;
@@ -47,7 +55,7 @@ opacity: 0;
 position: absolute;
 font-size: 50px;
 
-color: rgba(220, 220, 220, 0.8);
+
 background-color: rgba(45, 44, 44, 0.8);
 padding: 10px;
 }
@@ -98,8 +106,8 @@ opacity: 1;
     <div class="container">
         <div class="square"><h2>Notre collaboration avec Voies Navigables de France (VNF)</h2>
             <div class="container2">
-                <img src="/Images_Site/vnf.jpg">
-                <img src="/Images_Site/Replantons_le_canal.png">
+                <img src="../assets/vnf.jpg">
+                <img src="../assets/Replantons_le_canal.png" alt="eee">
             </div>
 
 
@@ -125,7 +133,7 @@ opacity: 1;
 
             </p>
             <div id="slider">
-                <img src="/Images_Site/carouselle_en_bas_1.jpg" alts="La forêt de peupliers" id="slide" class="fade">
+                <img src="../assets/carouselle_en_bas_1.jpg" alts="La forêt de peupliers" id="slide" class="fade">
                 <div id="precedent" onclick="ChangeSlide(-1)"><</div>
                 <div id="suivant" onclick="ChangeSlide(1)">></div>
             </div>
@@ -135,7 +143,7 @@ opacity: 1;
     </div>
 
     <script>
-        const slide = ["/Images_Site/carouselle_en_bas_1.jpg", "/Images_Site/carouselle_en_bas_2.jpg", "/Images_Site/carouselle_en_bas_3.jpg", "/Images_Site/carouselle_en_bas_4.jpg"];
+        const slide = ["../assets/carouselle_en_bas_1.jpg", "../assets/carouselle_en_bas_2.jpg", "../assets/carouselle_en_bas_3.jpg", "../assets/carouselle_en_bas_4.jpg"];
         let numero = 0;
 
         function ChangeSlide(sens) {

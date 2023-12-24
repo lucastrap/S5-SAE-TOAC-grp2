@@ -39,3 +39,10 @@
             text-decoration: none;
             color: #007BFF;
         }
+
+@media (max-width: 768px) {
+    .square {
+        width: 90% !important;
+        height: 100%;
+    }
+}
