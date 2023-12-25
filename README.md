@@ -150,6 +150,7 @@ Project Phase 3: [Phase 3](https://github.com/lucastrap/S5-SAE-TOAC-grp2/issues?
 ## Documents
 - [Technical Document](./documents/documentation_technique.adoc)
 - [Existing Analysis](./documents/AnalyseExistant.pdf)
+- [Rapport de tests bdd](./documents/Rapport%20de%20tests%20bdd.pdf)
 
 #### Final Reports
 
